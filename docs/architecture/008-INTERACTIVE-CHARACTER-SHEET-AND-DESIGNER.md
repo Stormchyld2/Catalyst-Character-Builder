@@ -2,7 +2,7 @@
 
 **Product:** Catalyst Character Studio  
 **Status:** Proposed implementation architecture — subject to owner review  
-**Authority:** 010 Character Engine Build Plan & Ownership; 003 Character Data Model; 005 Calculation/Conditions/Validation; 006 Creation; 007 Advancement; 009 Sourcebook Library  
+**Authority:** 016 Character Engine Build Plan & Ownership; 003 Character Data Model; 005 Calculation/Conditions/Validation; 006 Creation; 007 Advancement; 009 Sourcebook Library  
 **Primary ownership:** M02 Interactive Character Sheet & Designer; C09 Character Sheet Binding & Theme. Integrations with C01–C08 and C10–C12.
 
 ## 1. Purpose and design principles
