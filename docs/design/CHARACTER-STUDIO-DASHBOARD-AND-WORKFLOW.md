@@ -102,9 +102,10 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 ## 10. Approved Character Dashboard screen (2026-11-23)
 
+![Character Dashboard](../../images/character-dashboard-mockup.png)
+
 **Status:** Character Dashboard visual direction approved by product owner. The mockup image should be committed as `images/character-dashboard-mockup.png` and referenced here once present; do not use a broken image link or assume the image was uploaded. Design approval does not mean the screen is implemented.
 
-![Character Dashboard](../../images/character-dashboard-mockup.png)
 
 **Entry and navigation:** Clicking a character card opens this dashboard. Breadcrumb `Characters > [Character Name]` returns to Character Library. Top contextual tabs are Character (active), Builder, Sheet, Level Up, Inventory, Spells, Portrait, Notes, Journal, Export; omit or disable inapplicable tabs according to installed ruleset and character state. `Open Character Sheet` opens the interactive sheet; `Edit in Builder` opens the guided/manual builder without creating a new character. No selected character means no character dashboard.
 
