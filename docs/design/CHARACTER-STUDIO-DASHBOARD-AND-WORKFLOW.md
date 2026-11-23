@@ -236,6 +236,8 @@ When option cards exceed the panel's available height, **scroll inside that pane
 
 ## 16. Approved Spells / Powers Management (2026-11-23)
 
+![Character Spellbook](../../images/Spellbook.png)
+
 **Status:** Product owner approved the Spells / Powers visual layout and explicitly required spells and abilities to be sourced per selected tabletop system. Design approval does not imply implemented functionality. Save the approved mockup as `images/character-spells-powers-mockup.png`; add a Markdown image reference only once that asset is committed.
 
 **Layout:** Preserve the Catalyst Frost Blue shell, expanded Characters navigation, contextual Spells tab and breadcrumb `Characters > [Character] > Spells / Powers`. Use stable desktop panels for character/caster summary and resource tracking (left), searchable/filterable spell or power catalog and loadouts (center), selected ability details (right), plus quick actions and system-specific summaries. Hide visual scrollbars but retain accessible mouse-wheel, touchpad, touch and keyboard scrolling inside overflowing panels. No empty cards or irrelevant fields.
