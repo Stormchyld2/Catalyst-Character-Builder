@@ -36,7 +36,7 @@ These CSS names are proposed semantic aliases; adapt them to the parent Catalyst
 - **M01 Guided Character Builder:** pack-defined steps, options, eligibility, dependency previews, draft/resume/review/finalize.
 - **M02 Interactive Character Sheet & Designer:** manual and guided characters share the same canonical sheet model; editable fields, derived values, resources, tabs, versioned templates, customization and print profiles.
 - **M03 Character Advancement:** level/track progression, multiclassing where rules define it, explicit proposals, validation, previews, confirmations and history.
-- **M04 NPC & Creature Stat Block Composer:** simple NPC and expanded rules-driven creature/stat-block workflows.
+- **M04 NPC & Creature Stat Block Composer:** simple NPC and expanded rules-driven creature/stat-block workflows.\n- **C13 Local Portrait Generator:** optional offline portrait generation from system/species/class/appearance, model downloaded only by explicit user action, complete inference pipeline capped at 2B parameters pending verified benchmark; never block character creation.
 - **Sourcebooks:** users may reference lawfully obtained PDF and other digital books offline; sourcebook library/reader and citation infrastructure are shared parent services. Imported PDF text is **not automatically executable rules data**.
 - **Guided and Manual creation are equally first-class** and produce the same C01 character schema. System-Neutral manual creation must work with no D&D pack installed.
 - **Edition policy:** application default for new D&D characters is D&D 5e **2014**; D&D 5.5e **2024 Edition** is selectable. Initial planned distributable structured starter content is appropriately licensed **SRD 5.2.1 (2024)**, subject to license verification. Do not silently mix 2014/2024 rules, substitute a missing pack, or advertise unsupported guided content. Existing characters pin their own system/edition and pack versions/digests; changing default settings does not migrate them.
@@ -55,7 +55,7 @@ Character Studio **owns**:
 - `C09` Character Sheet Binding & Theme
 - `C10` Character Sourcebook Linker
 - `C11` Character Import/Export & Print Profiles
-- `C12` Character History, Diff & Reconciliation
+- `C12` Character History, Diff & Reconciliation\n- `C13` Local Character Portrait Generation — optional fully offline character/NPC portrait engine; complete pipeline ≤2B parameters; see `docs/architecture/017-LOCAL-CHARACTER-PORTRAIT-GENERATION-ENGINE.md`
 
 Character Studio may incubate pure reusable **S04 Rules Pack Registry**, **S05 Declarative Formula & Modifier Engine**, **S06 Choice & Prerequisite Engine** for later parent consumption.
 
