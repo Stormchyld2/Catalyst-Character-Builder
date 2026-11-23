@@ -8,7 +8,7 @@
 
 ## 1. Ownership and product goals
 
-This standalone repository is the **implementation and test owner** of Character Builder, Character Sheet, advancement UX and all **C01–C12 supporting character engines** listed below. The same implementation is later integrated into the parent Catalyst program via adapters and contracts. Claude working in the parent Catalyst repo should **not independently rebuild** these engines.
+This standalone repository is the **implementation and test owner** of Character Builder, Character Sheet, advancement UX and all **C01–C13 supporting character engines** listed below. The same implementation is later integrated into the parent Catalyst program via adapters and contracts. Claude working in the parent Catalyst repo should **not independently rebuild** these engines.
 
 Use Catalyst branding: Obsidian/charcoal/gunmetal, metallic silver and Frost Blue (#6EA9CF), with exact palette values defined in repository AGENTS.md; Svelte 5 + TypeScript + Tauri 2 + Rust; Windows offline-first; ordinary user-owned Markdown/YAML/JSON project files authoritative, never a mandatory SQLite/cloud backend.
 
@@ -38,7 +38,7 @@ Feature benchmark: guided creation, calculations and interactive digital sheets 
 | **C09** | Character Sheet Binding & Theme | Render fields and derived stats into customizable widgets, tabs, responsive design, decorative/clean/ink-friendly skins |
 | **C10** | Character Sourcebook Linker | Edition, sourcebook and page references for character options using the **parent shared Sourcebook Library PDF/citation API** |
 | **C11** | Character Import/Export & Print Profiles | Native Markdown/YAML/JSON roundtrips, character import mapping, blank/completed/decorative PDF sheet profiles using shared print interfaces |
-| **C12** | Character History, Diff & Reconciliation | Auditable changes, advancement history, undo/recovery where valid, rule-pack upgrades, conflicting manual overrides and template migrations |
+| **C12** | Character History, Diff & Reconciliation | Auditable changes, advancement history, undo/recovery where valid, rule-pack upgrades, conflicting manual overrides and template migrations |\n| **C13** | Local Character Portrait Generation | Optional offline image generation, complete pipeline ≤2B parameters, character-aware prompts, model validation, inference adapters, portrait preview/asset attachment; see Architecture 017 |
 
 These engines are not substitutes for the parent application's global project/document storage, search, PDF reader, dice evaluation, print engine, or event/permission APIs.
 
@@ -106,4 +106,4 @@ Those are illustrative names; finalize DTOs and typed errors in actual contracts
 - No copied GPL code without deliberate permission/licensing decision; no protected official book text redistributed.
 - The shared global dice engine remains the only authoritative dice evaluator.
 
-**Coordination:** Parent Catalyst architecture 023 has been updated to assign M01–M04 and C01–C12 here. Claude's parent-app engine sessions should focus on unowned shared engines, adapters and contracts, not duplicate these implementations.
+**Coordination:** Parent Catalyst architecture 023 has been updated to assign M01–M04 and C01–C13 here. Claude's parent-app engine sessions should focus on unowned shared engines, adapters and contracts, not duplicate these implementations.
