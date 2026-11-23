@@ -2,7 +2,7 @@
 
 **Product:** Catalyst Character Studio  
 **Status:** Proposed implementation architecture — subject to owner review  
-**Authority:** 010 Character Engine Build Plan & Ownership; 003 Character Data Model; 004 Rules Packs; 005 Calculation and Validation  
+**Authority:** 016 Character Engine Build Plan & Ownership; 003 Character Data Model; 004 Rules Packs; 005 Calculation and Validation  
 **Owned components:** M01 Guided Character Builder, C01 Character Record/Draft/Migration, C02 Option Catalog, C03 Build Legality & Completeness; integrations with S04/S05/S06 and C09/M02.
 
 ## 1. Purpose
@@ -13,7 +13,7 @@ The experience benchmark is a polished, approachable guided flow comparable in c
 
 ## 2. Release sequencing
 
-This document describes the target UX, **not permission to skip the implementation order** in approved 010:
+This document describes the target UX, **not permission to skip the implementation order** in approved 016:
 1. C01: System-Neutral canonical record, draft/recovery, migration and save/reload tests.
 2. S04/S05/S06 foundations plus C02/C03: pack-aware choices, safe calculations, legality/completeness.
 3. C09/M02 manual interactive sheet MVP.
@@ -30,7 +30,7 @@ A **New Character** entry point offers:
 - **Resume Draft** — reopen an unfinished draft at its last checkpoint.
 - **Import Character** — later supplied by C11, not a separate canonical data model.
 
-For new D&D characters, the previously approved application setting defaults to **D&D 5e (2014)**, with **D&D 5.5e (2024 Edition)** selectable. The 010 initial implementation-content target is System-Neutral plus properly licensed SRD 5.2.1 (2024); if a distributable 2014 rules pack is unavailable, the UI must visibly distinguish the edition setting from actual installed guided-content availability. It must never silently substitute 2024 mechanics for 2014.
+For new D&D characters, the previously approved application setting defaults to **D&D 5e (2014)**, with **D&D 5.5e (2024 Edition)** selectable. The 016 initial implementation-content target is System-Neutral plus properly licensed SRD 5.2.1 (2024); if a distributable 2014 rules pack is unavailable, the UI must visibly distinguish the edition setting from actual installed guided-content availability. It must never silently substitute 2024 mechanics for 2014.
 
 A character's chosen edition and exact rules pack versions/digests are pinned in its record. Changing the default edition does not modify existing characters.
 
