@@ -196,6 +196,8 @@ When option cards exceed the panel's available height, **scroll inside that pane
 
 ## 14. Approved Level Up / Character Advancement screen (2026-11-23)
 
+![Character Level-Up Dashboard](../../images/Level-Up.png)
+
 **Status:** Product owner approved the Level Up / Advancement visual layout. Mockup filename: `images/character-level-up-mockup.png`; add its relative Markdown image only once committed. Approval is of the visual concept and interaction model, not of the example Fighter mechanics or implementation.
 
 **Layout and navigation:** Preserve Catalyst's expandable Characters sidebar, contextual workspace tabs with Level Up active, breadcrumb `Characters > [Character] > Level Up`, and Frost Blue styling. Three stable desktop regions: left current-character portrait/identity, current and proposed progression and baseline stats; center ruleset-driven advancement stepper and option selection; right before/after numeric preview and concise changes-at-a-glance. Below, an optional system-specific feature information banner and persistent Back to Character, Cancel and Apply Advancement controls. Responsive layouts may stack intentionally.
