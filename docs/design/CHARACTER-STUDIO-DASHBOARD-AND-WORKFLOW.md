@@ -8,7 +8,7 @@
 
 ## Dashboard visual reference
 
-![Character Studio Dashboard](../../images/character-studio-dashboard.png)
+![Catalyst Character Generator](../../images/Catalyst%20Elf%20Ranger%20Portrait%20Studio.png)
 
 > **Design reference only.** This is the approved layout concept, not an implemented application screenshot. The illustration predates receipt of the official Catalyst icon and therefore its generated compass logo must be replaced by the repository's actual `images/favicon.png` during implementation. The application must use the original icon, not the one depicted here.
 
