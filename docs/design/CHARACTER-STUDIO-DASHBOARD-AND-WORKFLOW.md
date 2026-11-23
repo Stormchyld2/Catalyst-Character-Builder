@@ -121,6 +121,8 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 ## 11. Approved Interactive Character Sheet (2026-11-23)
 
+![Character Sheet](../../images/Character-sheet.png)
+
 **Status:** Product owner approved the visual layout. Save the mockup in repository root `images/interactive-character-sheet-mockup.png`; add an inline Markdown image reference here **only after** that image is committed. This is design approval, not proof of implementation.
 
 **Purpose and routing:** The Sheet workspace button and the Character Library card's explicit Open Sheet action open this playable, editable sheet directly. The Character button returns to the selected character's dashboard. Maintain selected character, breadcrumbs (`Characters > [Name] > Character Sheet`), unsaved-work protection and back navigation. The top contextual workspace navigation remains Character, Builder, Sheet (active), Level Up, Inventory, Spells, Portrait, Notes, Journal, Export, filtered by ruleset/permissions.
