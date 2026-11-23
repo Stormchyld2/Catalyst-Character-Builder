@@ -343,3 +343,29 @@ Character Journal entries are player/character-owned narrative records and **do 
 Persist locally with truthful autosave, crash recovery, unsaved-change handling, attachment lifecycle management, safe import/export, and permission-respecting offline access. Reuse the typed standalone/embedded Catalyst integration contracts; parent Catalyst owns canonical campaign and Wiki records, while Character Studio owns journal entries and references. Do not claim cloud sync or GM sharing exists until actually implemented.
 
 **Acceptance gate:** Verify chronological entry creation/edit/reopen, timeline ordering, filtering/search, templates, attachments, cross-links, milestones, privacy and permission boundaries, import/export, recovery, no unauthorized Wiki or campaign edits, and visibly distinct Notes-versus-Journal navigation.
+
+## 20. Approved Character Export Workspace (2026-11-23)
+
+**Status:** Product owner approved the Export screen layout and capabilities. This documents intended behavior, not verified implementation. Approved mockup target: `images/character-export-mockup.png` (only link after image has actually been added to repository).
+
+### 20.1 Layout and workflow
+
+Preserve the Catalyst dark charcoal/Frost Blue visual system, character context card, active Export top tab, and three primary configuration panels: **Export Content**, **Export Format**, and **Output Options**. Provide contextual Export navigation for Quick Export, Custom Export, Print/PDF, Share (LAN), VTT Export, Character Pack and Backup/Archive, plus Saved Exports and Export Presets. Below the configuration panels, offer Quick Export Profiles for Full Character, Print Sheet, VTT Package, Player Share, Archive Pack and Custom. Preview Export must accurately reflect selected content, destination format and privacy settings; Export Now performs the actual operation and reports success/failure and destination. Save as Preset and Reset to Default must work. Avoid placeholder actions and inaccurate progress states.
+
+### 20.2 Content, formats and output
+
+Selectable content includes character sheet, background/biography/traits, statistics/skills, advancement history, inventory/equipment, spells/powers/abilities, feats/features, portraits/images, personal Notes, selected or all Journal entries, and authorized linked campaign/Wiki references. Offer PDF print-ready, self-contained HTML, structured JSON, XML, Markdown, and supported VTT package adapters. Exported data and print layouts derive from the selected installed tabletop system/edition and content packs; do not assume D&D-specific fields or spell mechanics. Where a format cannot faithfully express some content, show an explicit compatibility warning and identify what will be omitted. Prioritize native Catalyst VTT export; support Foundry or other external VTT formats only through validated, version-aware adapters.
+
+Output controls include safe file name, destination folder picker, applicable cover page/table of contents, single-file mode where feasible, optional ZIP packaging, and saved user presets. Keep defaults sensible and format-specific; disable or hide incompatible options. Quick profiles must resolve to explicit, inspectable settings, not silently bypass privacy checks. Provide print preview and platform print action for PDF/print workflows, and show previous export artifacts only when they exist.
+
+### 20.3 Privacy, permissions, transfer and archive
+
+**Private character Notes and Journal entries are excluded from shared exports by default** and included only upon explicit user selection; sharing a preset must not silently re-enable them. Never export inaccessible/GM-only Wiki records, unrevealed campaign data or restricted attachments. Export links only when safe and permitted; offline permission/cache policy still applies. LAN sharing requires an available authorized peer, explicit selection and a confirmed transfer result, not a claim of automatic synchronization. Character Pack/Archive ZIP must include a versioned manifest, stable IDs, dependency metadata and the selected assets needed for restoration; distinguish a portable player-sharing package from a complete private backup. Validate imports and prevent overwrite/data loss through preview and conflict handling.
+
+### 20.4 Offline, accessibility and acceptance
+
+All local exports must work without internet, with deterministic serialization, filename/path sanitization, correct file extension, graceful errors and accurate progress/completion. Preserve panel sizes and internal scrolling with hidden visual scrollbars; maintain keyboard/touch accessibility and responsive layout. Integrate through typed contracts with standalone Character Studio and parent Catalyst without duplicating ruleset or Wiki authorities.
+
+**Acceptance gate:** Verify each output format and selected-content combination; PDF pagination/printing; HTML portability; JSON/XML round trip; Markdown formatting; VTT package compatibility; images and attachments; archive restore; LAN authorization and transfer; custom presets and preview fidelity; permission-denied Wiki data; privacy-default exclusions; offline operation; overwrite protection and error handling.
+
+**Current screen sequence:** Character Library/Dashboard, Builder, Sheet, Level Up, Inventory, Spells/Powers, Portrait Studio, Notes, Journal, Export. The core screen-design walkthrough is approved; implementation and integration remain separately verifiable.
