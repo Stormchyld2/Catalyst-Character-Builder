@@ -211,3 +211,23 @@ When option cards exceed the panel's available height, **scroll inside that pane
 **Availability and edge cases:** Respect character ownership/permissions, archived/read-only state, maximum progression, unsupported advancement, invalid/missing rule packs and offline storage failures. No false success messages; never apply partial changes. Use original Catalyst branding assets and the approved shared standalone/embedded navigation contract.
 
 **Next screen to review:** Inventory or Spells workspace, depending on design priority.
+
+## 15. Approved Character Inventory, Item Condition, and Currency Management (2026-11-23)
+
+**Status:** Product owner approved the Inventory mockup **conditional on all capabilities in this section being implemented**. These are acceptance requirements, not optional future enhancements. Approved mockup filename: `images/character-inventory-mockup.png`; insert the relative Markdown image only once committed. The mockup is a visual reference, not a working screen.
+
+**Layout:** Retain the approved Frost Blue Character Studio shell, contextual Inventory tab, character summary, carrying-load and currency panels, containers, searchable inventory grid, equipped-item slots, item detail inspector, and quick actions. Dynamic option sets show only real supported categories/actions/slots, with no empty cards. Bound panel dimensions; internal mouse-wheel, touchpad, touch and keyboard scrolling with visually hidden scrollbars. Responsive stacking is allowed on small screens.
+
+**Complete item CRUD and use:** Add items from installed rules-pack catalogs or create fully custom items; inspect, edit, duplicate, equip/unequip, use/consume, change quantities, move between containers, transfer to another character or permitted destination, drop and remove items. Support notes, descriptions, type, rarity when defined, weight, value, ammunition, charges, stack sizes, container capacity and ownership/location. Validate inventory changes and avoid silent loss or duplication. Removing and destructive transfers require confirmation or a safe undo path.
+
+**Two distinct damage concepts:** (1) weapon/attack damage statistics, including damage dice, type, modifiers, properties and special effects derived from applicable rules and item overrides; and (2) physical **item condition/damage**, including condition notes, wear, durability, damage incidents, repairs and broken state when supported. Never confuse damage dealt with item damage. Condition labels such as Pristine/Good/Worn/Damaged/Broken are configurable presentation defaults only; do not impose them as universal mechanics. Permit freeform condition notes even when the ruleset has no durability model.
+
+**System-specific currency:** Denominations, names, symbols, exchange/conversion rules, precision and weight (if relevant) come from the installed system/edition/content packs; allow custom denominations where supported. Support adding/subtracting funds, purchases, loot/rewards, expenses, transfers between characters or containers and manual adjustments. D&D pp/gp/ep/sp/cp is only an example, not a universal model. Do not invent exchange rates for systems without them; allow systems with non-coin or no currency models.
+
+**Audit/history:** Persist a local, timestamped history of acquisitions, edits, uses, condition changes, repairs, transfers, removals, purchases, rewards and currency changes with quantities/amounts and before/after values. Provide correction/reversal workflows without corrupting balances, inventory counts or provenance. A failed operation must not create a successful history entry.
+
+**Shared state and calculations:** Inventory and currency are part of the authoritative character record and synchronized with the interactive sheet and dashboard. Equipping/unequipping, condition changes and encumbrance updates trigger ruleset-driven recalculation of relevant derived statistics; do not hardcode D&D weight limits, currencies, slots or equipment effects. Shared rules-pack registry, formulas, prerequisites and storage services are the sources of truth. Support classless systems, missing packs, custom items, offline operation, read-only states, and recoverable persistence failures.
+
+**Acceptance gate:** Inventory design is not implementation-complete until adding, editing, deleting, condition/damage notation, system-specific currency transactions, equipment effects, transfers and history are functional and tested against at least a D&D rules pack and a materially different RPG currency/equipment model.
+
+**Next screen:** Spells / Powers workspace.
