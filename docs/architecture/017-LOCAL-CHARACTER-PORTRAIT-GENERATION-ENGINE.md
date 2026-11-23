@@ -5,7 +5,7 @@
 **Owner:** Shared Stable Diffusion inference runtime belongs to parent Catalyst; Character Studio owns the portrait-specific prompt/UI adapter. Standalone Studio may prototype against a shared runtime port, but must not fork the model service.  
 **Consumers:** M01 Guided Builder, M02 Interactive Sheet, M04 NPC/Creature Composer; parent Catalyst may consume through a typed port.
 
-![Catalyst Character Generator](../../images/Catalyst Elf Ranger Portrait Studio.png)
+![Catalyst Character Generator](../../images/Catalyst-Elf-Ranger-Portrait-Studio.png)
 
 ## 1. Product requirement
 
