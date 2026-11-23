@@ -253,3 +253,35 @@ When option cards exceed the panel's available height, **scroll inside that pane
 **Acceptance requirements:** Demonstrate ruleset-specific catalogs and filters for at least two materially different supported systems, edition isolation, known/prepared/usable state distinctions, custom ability CRUD, resource tracking and synchronized character-sheet state. The mockup's Fighter and Fireball are illustrative and must not be treated as a valid default character build.
 
 **Next screen for review:** Character Portrait or Notes / Journal workspace.
+
+## 17. Approved Character Portrait Studio (2026-11-23)
+
+**Status:** Product owner approved the complete Portrait Studio concept in the Catalyst project conversation. This section records the reviewed UI reference and interaction contract; it does **not** claim implementation. The supplied reference screenshot is `Catalyst Portrait Studio Interface(1).png` (not yet verified in this repository). Commit the screenshot to `images/character-portrait-studio-mockup.png` and add `![Approved Character Portrait Studio](../../images/character-portrait-studio-mockup.png)` here **only after** that image exists in the repository. Keep this screen consistent with the dedicated portrait engine architecture in `docs/architecture/017-LOCAL-CHARACTER-PORTRAIT-GENERATION-ENGINE.md`.
+
+### 17.1 Approved visual structure
+
+Use the current Catalyst Character Studio shell and official Catalyst assets, not a newly generated logo. The screenshot shows a global icon rail, character picker/search sidebar with active character, top contextual tabs (Character, Builder, Sheet, Level Up, Inventory, Spells, **Portrait**, Notes, Journal, Export), breadcrumb `Characters > [Character] > Portrait Studio`, and save/undo/redo status.
+
+The main work area has (1) a large editable character portrait preview with **Crop, Position, Background, Frame** tools, (2) an adjacent **Token Preview** panel with 64/128/256-pixel presets and **Create Token, Save Portrait, Import Image, Generate Locally** actions, (3) a right inspector with **Appearance** and **Generation** tabs, and (4) a bottom strip of selectable **Portrait Variants**. Preserve the approved dark charcoal, metallic surfaces and Frost Blue accent styling. Panel boundaries should remain stable, with internal scrolling and visually hidden scrollbars when content overflows; preserve keyboard/touch accessibility.
+
+### 17.2 Portrait sources and editing
+
+A character portrait may originate from an imported local image or from optional offline AI generation. Both sources open in the **same Portrait Studio editor** and support cropping, positioning, background adjustments and token frames. Preserve the original source asset; save non-destructive editing parameters and derived exports separately. Support multiple variants, switching between them, choosing the active portrait, saving to the selected character, saving to the shared portrait library, and exporting images. Show truthful unsaved/saved state and guard against losing changes. Missing image files must fail gracefully.
+
+### 17.3 Dynamic appearance and generation controls
+
+The Appearance tab includes ancestry/species (from the selected character's installed ruleset/edition), age, build, hair, eyes, distinctive features and image style, with additional appropriate fields supplied by the ruleset or portrait adapter. Ruleset-specific dropdown values must be generated from actual installed pack metadata, with no hardcoded universal ancestry list, empty buttons or irrelevant controls. User-entered descriptive appearance values remain available even if a ruleset lacks a formal vocabulary. Use validated character attributes to seed generation prompts without silently overwriting a player's chosen appearance.
+
+The Generation tab exposes relevant on-device generation settings, model availability/install state and progress/errors. **Stable Diffusion 3 Medium** is the previously selected optional shared Catalyst image-generation pipeline, subject to hardware feasibility and licensing/distribution review; Character Studio uses its portrait adapter rather than installing or duplicating a separate model runtime. Generation must work fully offline once the optional engine and assets are installed. Do not falsely show `Installed` or `Saved` until verified. Support sheet-friendly **Headshot** (default) and **Full Body** outputs, selectable styles, variants, preview and explicit save/export. Import/edit/token workflows must remain available without the AI model.
+
+### 17.4 VTT token creation and sharing
+
+**Token Studio is an integrated tool within Portrait Studio**, not a separate character generator. Allow the user to create tokens from either imported or generated portraits. Provide live circular token preview, adjustable crop/position/zoom, frame/border/background treatment, and selectable export dimensions including **64, 128 and 256 px**. Keep original resolution where available; do not imply upscaling restores detail. Generate transparent PNG tokens where supported, and permit saved token variants. Associate the chosen token with the selected character for later use by the Catalyst VTT and character sheet. A phone/player companion or sharing server must receive only assets the user intentionally shares and for which access is authorized; no cloud service is required for local editing.
+
+### 17.5 Integration, validation and acceptance
+
+The character record links to its active portrait, selected token, image variants and non-destructive edit metadata using stable local asset references. Shared Catalyst asset/image services handle storage and exports; the Character Studio owns the portrait-specific UI and prompt adapter. The same components/routes must work in standalone Character Studio and embedded Catalyst without restructuring. Character selection switches the active portrait context safely. Respect read-only character states and offline-first persistence.
+
+**Acceptance gate:** Verify import → edit → save portrait → reopen; local generation → edit → variant selection → save; token crop/frame → export at each supported size → assign to character → load in VTT; missing-model and missing-image states; ruleset-driven ancestry controls; undo/redo and unsaved-change guards. The reference screenshot is an approved **design mockup**, not evidence that any of these flows are coded.
+
+**Next design screen:** Notes / Journal.
