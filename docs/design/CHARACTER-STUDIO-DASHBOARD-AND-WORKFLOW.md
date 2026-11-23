@@ -287,3 +287,31 @@ The character record links to its active portrait, selected token, image variant
 **Acceptance gate:** Verify import → edit → save portrait → reopen; local generation → edit → variant selection → save; token crop/frame → export at each supported size → assign to character → load in VTT; missing-model and missing-image states; ruleset-driven ancestry controls; undo/redo and unsaved-change guards. The reference screenshot is an approved **design mockup**, not evidence that any of these flows are coded.
 
 **Next design screen:** Notes / Journal.
+
+## 18. Approved Character Notes and Worldbuilding Wiki Integration (2026-11-23)
+
+**Status:** Product owner approved the Character Notes screen and explicitly confirmed it is **player-owned note-taking, not direct editing of the Worldbuilding Wiki**. This is a design/architecture requirement, not proof of implementation. Approved visual mockup filename: `images/character-notes-mockup.png`; embed the relative Markdown image only after the asset is committed.
+
+### 18.1 Notes screen and capabilities
+
+Preserve the Catalyst Frost Blue shell, selected-character context, Notes workspace tab, character identity card, categorized/tagged note navigation, searchable and sortable note list, rich-text editor, attachment/linked-record inspector, and accurate local save state. Allow creation, editing, duplication, pinning, archiving, deletion with confirmation or recoverable undo, import and export. Support freeform categories, tags, checklists, images and file attachments, plus links to permitted NPC, quest, location, session, faction and lore records. Fixed-size desktop panels must scroll internally with visually hidden scrollbars while remaining keyboard/touch accessible; no empty placeholder buttons.
+
+**Notes versus Journal:** Notes are freely organized personal information, theories, clues, reminders and observations. Journal is a separate chronological character adventure/session record. They may cross-link but are not interchangeable or duplicated data stores.
+
+### 18.2 Ownership and Wiki boundaries
+
+**Character Notes are owned by the character/player and are not canonical world lore.** The parent Catalyst Worldbuilding Wiki is the authoritative campaign knowledge base managed through its own permissions and editorial workflow. Editing, saving or deleting a character note **must never automatically create, edit or delete** a Wiki entry. A player's speculation must not become canonical campaign fact merely because it mentions an NPC, location or quest.
+
+Store stable links to Wiki record IDs rather than copying entire Wiki articles into character notes. Link pickers and navigation must only expose records the current player is authorized to discover/read; GM-only secrets, unrevealed locations, hidden relationships and inaccessible attachments must remain inaccessible through search, previews, caches, exports and deep links. If a Wiki article changes, linked previews resolve to the latest authorized article while preserving the player's original note text. Broken, removed or newly restricted links fail gracefully.
+
+**Optional proposal flow:** A player may explicitly submit a discovery or suggested Wiki correction for GM review, if the parent Catalyst supports this capability. This creates a separate pending proposal; it does **not** publish or mutate Wiki content until a suitably authorized GM approves it. Do not present this action as available until implemented.
+
+### 18.3 Offline and integration contract
+
+Notes and attachments persist locally, with truthful autosave, revision/recovery handling, unsaved-change guards, and no cloud dependency. Previously authorized Wiki material may be available offline only within the user's current authorization and caching policy; on reconnect, recheck permissions and reconcile changes without leaking GM-only content. Cross-device sharing/synchronization must be explicit and access-controlled; private notes remain private by default.
+
+Character Studio owns the personal notes UI/data and references; the parent Catalyst owns the shared Wiki records, permissions, navigation targets and optional proposal-review workflow. Reuse typed integration contracts in standalone and embedded modes without duplicating the Wiki. In standalone mode, absent Wiki capabilities should be hidden or clearly unavailable rather than dead controls.
+
+**Acceptance gate:** Verify private notes CRUD, tags/categories, checklist and attachments, reliable local save/recovery, permitted Wiki links, denied/hidden Wiki records, stale/broken links, no automatic Wiki edits, and correct standalone behavior. Any GM proposal flow requires separate authorization and approval tests.
+
+**Next screen:** Character Journal.
