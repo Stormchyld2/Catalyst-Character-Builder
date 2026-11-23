@@ -82,6 +82,8 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 ## 9. Approved Character Library and card-opening workflow (2026-11-23)
 
+![Character Library Dashboard](../../images/Catalyst-Character-Library.png)
+
 **Status:** Layout direction and card behavior approved by product owner; illustrative mockup is not implemented code.
 
 **Character Library layout:** expandable Characters sidebar group; prominent Create Character; search, grid/list toggle, sorting, system/edition/status filters, dynamic species/class filters from installed rule packs, and optional tags/collections. Main content uses character portrait cards with name, RPG system/edition, class/subclass and level **only where defined by that system**, status and favorite indicator. Selected-character preview may show a larger portrait, relevant identity, roster/campaign when available, and quick actions. No hardcoded D&D class/level assumptions for other RPGs. Empty/draft/archived/missing-pack states must be handled without fabricated user data.
