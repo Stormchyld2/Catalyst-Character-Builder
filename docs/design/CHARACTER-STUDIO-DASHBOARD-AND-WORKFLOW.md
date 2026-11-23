@@ -256,6 +256,8 @@ When option cards exceed the panel's available height, **scroll inside that pane
 
 ## 17. Approved Character Portrait Studio (2026-11-23)
 
+![Character Portrait Studio](../../images/Portrait-Studio.png)
+
 **Status:** Product owner approved the complete Portrait Studio concept in the Catalyst project conversation. This section records the reviewed UI reference and interaction contract; it does **not** claim implementation. The supplied reference screenshot is `Catalyst Portrait Studio Interface(1).png` (not yet verified in this repository). Commit the screenshot to `images/character-portrait-studio-mockup.png` and add `![Approved Character Portrait Studio](../../images/character-portrait-studio-mockup.png)` here **only after** that image exists in the repository. Keep this screen consistent with the dedicated portrait engine architecture in `docs/architecture/017-LOCAL-CHARACTER-PORTRAIT-GENERATION-ENGINE.md`.
 
 ### 17.1 Approved visual structure
