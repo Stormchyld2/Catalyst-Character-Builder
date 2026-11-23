@@ -317,3 +317,27 @@ Character Studio owns the personal notes UI/data and references; the parent Cata
 **Acceptance gate:** Verify private notes CRUD, tags/categories, checklist and attachments, reliable local save/recovery, permitted Wiki links, denied/hidden Wiki records, stale/broken links, no automatic Wiki edits, and correct standalone behavior. Any GM proposal flow requires separate authorization and approval tests.
 
 **Next screen:** Character Journal.
+
+## 19. Approved Character Journal (2026-11-23)
+
+**Status:** Product owner approved the Character Journal mockup and workflow with an explicit refinement: Journal and Notes may share familiar workspace mechanics, but must be visually distinguishable at a glance. This is a design approval, not evidence of implementation. Approved mockup target: `images/character-journal-mockup.png` (link only after asset exists in repository).
+
+### 19.1 Purpose and visual differentiation
+
+Journal is a **chronological record of the character's adventures, sessions, events, reflections and development**, distinct from Notes' topic/category-based personal knowledge organization. Preserve shared Catalyst dark charcoal/Frost Blue shell, character identity context, top workspace tabs and consistent editing patterns. **Make the distinction immediately visible:** prominent Journal title and active tab, date/session-first entry list, a clearly discoverable timeline view, session and milestone markers, and entry-type icons. Notes retains folder/category-oriented navigation and information retrieval; Journal prioritizes the story over time. Never make the two workspaces look indistinguishable merely because both have rich-text editors.
+
+### 19.2 Approved Journal UI and operations
+
+Provide New Entry, templates, import/export, full-text search, date/session/type filtering, chronological list and timeline views, key-event filtering, and entry detail/editor. Support Session Logs, Field Journal, Personal Reflections, Milestones, Letters and In-Character entries, plus customizable types/templates; display counts from actual data, never mock placeholders. Journal entries support title, timestamp, optional session association, entry type, tags, pin/favorite, formatted text, lists, attachments/images, and cross-links to character Notes, quests, NPCs, locations and authorized Wiki entries. Create, edit, archive, restore, duplicate and delete with safe confirmations or undo. Show genuine last-edited and autosave state. All visible actions must function or be honestly disabled/hidden.
+
+Use ruleset-driven milestone information where available; do not hardcode D&D-only mechanics. The timeline should sort by the event date, support same-day multiple entries, and distinguish journal event time from edit time. Provide stable desktop panel dimensions, internal scrolling with hidden visible scrollbars, and accessible keyboard/touch interaction; stack responsively for smaller displays.
+
+### 19.3 Campaign, privacy, and Wiki integration
+
+Character Journal entries are player/character-owned narrative records and **do not edit official campaign session records or canonical Worldbuilding Wiki articles**. Link to existing campaign sessions and authorized shared records using stable IDs and permission-aware lookup. Private by default; optional sharing requires explicit user action and effective authorization. GM-only/unrevealed lore must not leak through search, link previews, offline caches or exports. Any suggested canon change belongs to a separately approved GM review flow, not Journal autosave. Notes and Journal can cross-link without copying records or silently merging their data.
+
+### 19.4 Offline-first persistence and acceptance
+
+Persist locally with truthful autosave, crash recovery, unsaved-change handling, attachment lifecycle management, safe import/export, and permission-respecting offline access. Reuse the typed standalone/embedded Catalyst integration contracts; parent Catalyst owns canonical campaign and Wiki records, while Character Studio owns journal entries and references. Do not claim cloud sync or GM sharing exists until actually implemented.
+
+**Acceptance gate:** Verify chronological entry creation/edit/reopen, timeline ordering, filtering/search, templates, attachments, cross-links, milestones, privacy and permission boundaries, import/export, recovery, no unauthorized Wiki or campaign edits, and visibly distinct Notes-versus-Journal navigation.
