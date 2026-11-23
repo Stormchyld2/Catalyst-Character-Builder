@@ -137,4 +137,22 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 **State handling:** draft/incomplete characters, missing rules pack, broken portrait, archived/read-only, no spells, no inventory, invalid derived values and save failures must render intelligibly and non-destructively. Confirm destructive or irreversible actions. Save state must reflect actual local persistence.
 
-**Next design screen:** Create Character / Guided Builder entry and workflow.
+**Next design screen:** Guided Builder (approved in §12), then Create Character entry screen.
+
+## 12. Approved Guided Character Builder (2026-11-23)
+
+**Status:** Product owner approved the Guided Builder mockup and confirmed the D&D Beyond–familiar stepwise creation approach. Visual/design approval only; no implementation is implied. Store the approved image at `images/guided-character-builder-mockup.png` and insert a relative Markdown image reference here after the image is actually committed.
+
+**Screen structure:** Preserve the Catalyst global sidebar with expanded Characters group and contextual top workspace tabs, with Builder active. Breadcrumbs `Characters > Create Character > Guided Builder`; title, active tabletop system/edition selector and creation-mode control. The illustrated Guided / Standard / Advanced options are UX concepts: all must share the same character schema and validation, with mode-specific behavior specified before implementation; do not ship inert mode buttons.
+
+**Progressive workflow:** Display a ruleset-driven, clearly labeled stepper with completed/current/upcoming states. The illustrated D&D 5e (2014) sequence is Basics → Species/Race → Class → Background → Abilities → Equipment → Features → Review, but exact ordering, terminology and steps come from the installed rules pack. D&D 5e 2014 and 2024 remain distinct editions. Non-D&D and classless systems must not inherit irrelevant D&D steps. Provide Previous, Next, Save Draft, Review/Finish and explicit validation feedback. Step changes must not discard work.
+
+**Main choice area:** Searchable/browsable list of eligible options (illustrated with classes), a prominent selected-option description and mechanics summary, source attribution when licensed/available, and a conditional second-level choice area (illustrated with ranger subclasses). Class/subclass choices and availability must obey ruleset-specific level gates, prerequisites and dependencies; the mockup's level-1 subclass display is illustrative and must not override actual D&D rules. Locked options should explain requirements and distinguish missing content packs from failed prerequisites. Changes to earlier choices must show downstream impact before invalidating dependent choices.
+
+**Live character summary:** Persistent responsive right pane with character name/portrait, system and edition, species/ancestry, class/role/subclass when applicable, background, current level/progression if supported, preview ability scores/modifiers and proficiencies. Update from validated character state and shared rules/formula services, not hardcoded example values. Show pending/incomplete choices without inventing defaults.
+
+**Persistence and completion:** Save Draft at every stage, restore exact current step and selections, autosave only with truthful status, and guard navigation away from unsaved changes. Final Review must display all selections, derived statistics, source/pack provenance and warnings, require explicit confirmation, then create/finalize the character idempotently. From completion offer Character Dashboard and Open Sheet. Builder edits to existing characters use the same record with revision history, not duplicate characters.
+
+**Visual and integration contract:** Use Obsidian/Charcoal/Gunmetal with Frost Blue accents, official Catalyst branding assets, accessible keyboard/focus controls, responsive collapse for the summary, and fully offline rules-pack data. One reusable builder route/component set serves both standalone Character Studio and embedded parent Catalyst. The mockup is a visual reference, not a source of licensed rule text or proof of actual rules compliance.
+
+**Next screen for approval:** Create Character entry (tabletop system, ruleset/edition, and Guided versus Manual creation selection).
