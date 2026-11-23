@@ -33,7 +33,7 @@ Library contextual pane: Search, All Characters, Favorites, Recent, Drafts, Coll
 
 ## 3. Navigation and embedding contract
 
-**Standalone rail:** Home, Characters, Create, Drafts, Sheets (opens selected/recent sheet; otherwise character picker), Rules & Sources, NPCs, Settings. Keep labels/icons consistent with parent Catalyst ModuleRail patterns. Collections and filters belong to contextual library pane rather than global rail. Do not show campaign ownership where parent host is absent.
+**Standalone navigation:** expandable **Characters** parent with child destinations (initial examples: Character Library, Create Character, Draft Characters, Import Character; final list subject to UX review). The active-character workspace uses top buttons for Character, Builder, Sheet, Level Up, Inventory, Spells, Portrait, Notes, Journal, Export; only show system-applicable features. Standalone and embedded shells consume the same module navigation manifest; do not duplicate the global parent rail. Collections and filters belong to library content rather than separate global navigation. Do not show campaign ownership where parent host is absent.
 
 **Embedded in Catalyst:** parent owns the global module rail, window title/branding and settings host. Character Studio exports route descriptors, module entry point, contextual navigation, page components and settings-tab descriptors. **Do not nest a second global module rail or create a second settings dialog.** Host adapters inject project/campaign association, sourcebook access, dice, storage, permissions and print capabilities.
 
@@ -79,3 +79,21 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 6. Settings: standalone and embedded tab layouts.
 
 **Approval boundary:** User approved the dashboard's overall visual direction and asked for D&D Beyond–familiar workflow. Detailed page interactions and subsequent mockups remain subject to review before coding. M0 implementation gates remain unfulfilled until actual workspace/build/test evidence exists.
+
+## 9. Approved Character Library and card-opening workflow (2026-11-23)
+
+**Status:** Layout direction and card behavior approved by product owner; illustrative mockup is not implemented code.
+
+**Character Library layout:** expandable Characters sidebar group; prominent Create Character; search, grid/list toggle, sorting, system/edition/status filters, dynamic species/class filters from installed rule packs, and optional tags/collections. Main content uses character portrait cards with name, RPG system/edition, class/subclass and level **only where defined by that system**, status and favorite indicator. Selected-character preview may show a larger portrait, relevant identity, roster/campaign when available, and quick actions. No hardcoded D&D class/level assumptions for other RPGs. Empty/draft/archived/missing-pack states must be handled without fabricated user data.
+
+**Card navigation contract (approved):**
+- Clicking/tapping the **character card** opens that character's **Character Dashboard** (top workspace **Character** button), **not** the full sheet.
+- Explicit **Open Sheet** on the card or preview opens that character's **Interactive Character Sheet** directly (top **Sheet** button), bypassing the dashboard.
+- The **Character** top button always returns to the current character's dashboard; **Builder**, **Sheet**, **Level Up**, **Inventory**, **Spells**, **Portrait**, **Notes**, **Journal**, and **Export** navigate within the selected character's workspace as applicable.
+- When no character is selected, contextual workspace buttons are hidden or disabled; library actions remain available. Preserve current character ID, deep-link routing, browser-like back navigation, unsaved-work guards and role/permission checks.
+
+**Character Dashboard (next mockup):** character portrait, identity, RPG system/edition, class/subclass/level only if meaningful, campaign/roster status, system-defined key stats (e.g. D&D HP/AC/speed), progression, recent changes and quick actions for Open Sheet, Edit Build, Level Up, Inventory, Spells and Portrait. Use dynamic rule-pack view models, not a universal hardcoded D&D dashboard. Dashboard is a landing/overview page distinct from the full interactive sheet.
+
+**Integration requirement:** one module-owned typed navigation manifest for Characters parent and children, one contextual top-button manifest, same reusable pages in standalone and embedded Catalyst. The parent shell chooses the Characters group's global placement; no moving files or rewriting screens at integration.
+
+**Next design order:** Character Dashboard → Interactive Sheet → Create Character/Guided Builder → other contextual screens. Prior sequence in §8 is superseded for screen-design order only, not implementation gates.
