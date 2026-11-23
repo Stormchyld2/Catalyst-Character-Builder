@@ -320,6 +320,8 @@ Character Studio owns the personal notes UI/data and references; the parent Cata
 
 ## 19. Approved Character Journal (2026-11-23)
 
+![Character Journal](../../images/Journal.png)
+
 **Status:** Product owner approved the Character Journal mockup and workflow with an explicit refinement: Journal and Notes may share familiar workspace mechanics, but must be visually distinguishable at a glance. This is a design approval, not evidence of implementation. Approved mockup target: `images/character-journal-mockup.png` (link only after asset exists in repository).
 
 ### 19.1 Purpose and visual differentiation
