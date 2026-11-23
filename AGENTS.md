@@ -11,6 +11,8 @@
 - **Current project status:** Architecture documents 001–016 are authored. Documentation completion does **not** mean features, builds, tests or integrations exist. Inspect the actual code and Git status before claiming implementation.
 - **Authoritative build ownership:** `docs/architecture/016-CHARACTER-ENGINE-BUILD-PLAN.md`. **Implementation roadmap:** `docs/architecture/015-IMPLEMENTATION-ROADMAP-AND-DELIVERY-MILESTONES.md`. **First coding gate:** `docs/milestones/C01-M1-CHARACTER-RECORD-DRAFT-ROUNDTRIP.md`.
 
+**Approved Portrait Studio & VTT Token Maker:** `docs/architecture/018-PORTRAIT-STUDIO-AND-VTT-TOKEN-MAKER.md` governs non-destructive imported/generated portrait editing, optional C13 AI generator, circle/square token composition, transparent PNG exports and character/map asset integration. **M22 belongs to Character Studio.** Start editor/token MVP without requiring an AI model.
+
 ## 2. Approved Catalyst design system — mandatory
 
 **Frost Blue replaces amber/gold.** The parent Catalyst design system is authoritative; Character Studio must use the same palette, semantic tokens, typography and component language, not invent an independent application theme. The user supplied an approved palette image and reported uploading its copy to the repository's `images/` folder. Locate and inspect the actual image before changing UI styling; do not invent its filename. If the parent repo exposes shared tokens, reuse/align with those rather than copying unrelated styles.
