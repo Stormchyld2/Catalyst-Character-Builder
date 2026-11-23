@@ -22,7 +22,7 @@ Its experience should be comparable in clarity and usability to D&D Beyond's gui
 ## 3. Supported workflows
 
 ### Guided creation
-A resumable, step-by-step process driven by an installed, compatible rules pack. The steps and available choices are system-defined, not hardcoded to one edition. The initial target is D&D 5e-compatible character creation; edition-specific rule sets are separately versioned.
+A resumable, step-by-step process driven by an installed, compatible rules pack. The steps and available choices are system-defined, not hardcoded to one edition. The initial target supports two independently versioned D&D 5e-compatible rule profiles: **D&D 5e (2014)** and **D&D 5.5e (2024 Edition)**. The 2014 profile is the application default. Users select the default in Settings → Game Rules → Default Edition; each character records its own edition, so changing the default only affects newly created characters and never silently converts existing ones.
 
 ### Manual creation
 Create or edit a character without a supported rules pack. Users can define fields, sections, labels, notes, resources, and sheet layouts. Manual values must not be silently overwritten by automation. Guided and manual characters must coexist in the same library.
@@ -124,7 +124,7 @@ Sourcebook integration and advanced homebrew tooling can be phased separately, c
 
 ## 10. Open decisions for follow-up architecture
 
-- Exact MVP edition/content baseline and licensed content distribution.
+- Exact licensed content baseline for both D&D 5e (2014) and D&D 5.5e (2024 Edition), including rules-pack availability and permitted distribution.
 - Rules-pack schema, dependency semantics, and cross-edition compatibility.
 - Character file layout, transactional writes, encryption options, and backup policy.
 - Sheet-template schema and manual/custom field model.
