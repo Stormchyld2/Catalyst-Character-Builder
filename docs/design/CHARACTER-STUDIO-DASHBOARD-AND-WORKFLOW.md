@@ -214,6 +214,8 @@ When option cards exceed the panel's available height, **scroll inside that pane
 
 ## 15. Approved Character Inventory, Item Condition, and Currency Management (2026-11-23)
 
+![Character Inventory](../../images/Character-Inventory.png)
+
 **Status:** Product owner approved the Inventory mockup **conditional on all capabilities in this section being implemented**. These are acceptance requirements, not optional future enhancements. Approved mockup filename: `images/character-inventory-mockup.png`; insert the relative Markdown image only once committed. The mockup is a visual reference, not a working screen.
 
 **Layout:** Retain the approved Frost Blue Character Studio shell, contextual Inventory tab, character summary, carrying-load and currency panels, containers, searchable inventory grid, equipped-item slots, item detail inspector, and quick actions. Dynamic option sets show only real supported categories/actions/slots, with no empty cards. Bound panel dimensions; internal mouse-wheel, touchpad, touch and keyboard scrolling with visually hidden scrollbars. Responsive stacking is allowed on small screens.
