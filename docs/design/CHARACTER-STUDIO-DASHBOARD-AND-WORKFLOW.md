@@ -346,7 +346,7 @@ Persist locally with truthful autosave, crash recovery, unsaved-change handling,
 
 ## 20. Approved Character Export Workspace (2026-11-23)
 
-![Character Studio Export](../../images/Studio Export.png)
+![Character Studio Export](../../images/Studio-Export.png)
 
 **Status:** Product owner approved the Export screen layout and capabilities. This documents intended behavior, not verified implementation. Approved mockup target: `images/character-export-mockup.png` (only link after image has actually been added to repository).
 
