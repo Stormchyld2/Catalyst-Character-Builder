@@ -2,7 +2,7 @@
 
 **Product:** Catalyst Character Studio  
 **Status:** Proposed implementation architecture — subject to owner review  
-**Authority:** 010 Character Engine Build Plan & Ownership; 003 Character Data Model; 004 Rules Packs; 005 Calculation/Validation; 006 Guided and Manual Creation  
+**Authority:** 016 Character Engine Build Plan & Ownership; 003 Character Data Model; 004 Rules Packs; 005 Calculation/Validation; 006 Guided and Manual Creation  
 **Primary owners:** M03 Character Advancement; C04 Multiclass, Feature & Advancement Planner; integration with C01–C03, C05–C09, C12, and shared S04–S06.
 
 ## 1. Purpose and non-negotiable boundaries
@@ -13,7 +13,7 @@ No engine may silently mutate authoritative character files. C04/M03 are owned a
 
 ## 2. Release order and prerequisites
 
-Per approved 010, gameplay/advancement work follows successful C01 schema/roundtrip, S04–S06 + C02/C03 foundation, manual sheet MVP (C09/M02), and guided creator (M01). This document specifies the design now; implementation waits for those gates.
+Per approved 016, gameplay/advancement work follows successful C01 schema/roundtrip, S04–S06 + C02/C03 foundation, manual sheet MVP (C09/M02), and guided creator (M01). This document specifies the design now; implementation waits for those gates.
 
 Required inputs: immutable character snapshot and revision; pinned system/edition/pack digests; validated progression definitions; available options and prerequisites; current authored state and overrides; explicit user choices. Missing packs produce diagnostics, not speculative advancement.
 
@@ -33,7 +33,7 @@ Multiple simultaneous tracks are allowed. A system may support advancement with 
 
 - **D&D 5e (2014)** and **D&D 5.5e (2024 Edition)** have separate pinned progression rules and option references.
 - The 2014 edition remains the configured default for *new* D&D characters; changing the default does not reinterpret an existing character.
-- Initial distributable content target per 010 is System-Neutral plus appropriately licensed SRD 5.2.1 (2024). Full 2014 guided progression must not be advertised until the requisite licensed pack exists.
+- Initial distributable content target per 016 is System-Neutral plus appropriately licensed SRD 5.2.1 (2024). Full 2014 guided progression must not be advertised until the requisite licensed pack exists.
 - Rules packs define class advancement tables, subclasses, feats/ability score improvements, spellcasting changes, multiclass prerequisites and grants, and other edition-specific details. Do not hardcode the timing of these benefits or assume a rule shared across editions.
 
 A multiclass character retains separate track identities and advancement records for each class. Any aggregate level, proficiency or spellcasting result is calculated by the pinned rules, not duplicated as an authoritative value.
