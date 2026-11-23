@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-23  
 **Status:** Stable Diffusion 3 Medium pipeline approved as preferred model; optimization and hardware minimums require benchmarking. Not implemented.  
-**Owner:** Catalyst Character Studio (`Stormchyld2/Catalyst-Character-Builder`)  
+**Owner:** Shared Stable Diffusion inference runtime belongs to parent Catalyst; Character Studio owns the portrait-specific prompt/UI adapter. Standalone Studio may prototype against a shared runtime port, but must not fork the model service.  
 **Consumers:** M01 Guided Builder, M02 Interactive Sheet, M04 NPC/Creature Composer; parent Catalyst may consume through a typed port.
 
 ## 1. Product requirement
@@ -22,7 +22,7 @@ Build a fully offline, optional **Character Portrait Generator**. Given a charac
 
 ## 3. Engine boundaries and ownership
 
-**C13 — Local Character Portrait Generation Engine** owns prompt assembly, model manifest and validation, capability assessment, job orchestration, inference adapter interface, seed/settings provenance, cancellation, output validation and user-facing diagnostics. **C13 does not own** rules calculations, the canonical character file, global asset storage, image editing UI, network access, PDF printing or the sheet layout engine.
+**C13 — Character Portrait Generation Adapter** owns character-specific prompt assembly, ruleset-aware selectors, headshot/full-body framing, portrait job UX, character attachment and portrait-specific diagnostics. **Parent shared image-generation service (new shared engine ID to be assigned in parent registry)** owns one SD3 Medium model installation, manifests, capability assessment, inference runtime, queue/job orchestration, seed/settings provenance, cancellation and generic output validation. Character Studio consumes it via a typed port, using a standalone host adapter during development. C13 does not own rules calculations, canonical character files, global asset storage, image editing UI, network access, PDF printing or sheet layout.
 
 - **C01** owns character portrait reference and revision-safe updates; do not embed large image bytes in canonical JSON.
 - **C09/M02** render and crop selected portrait without changing its source asset.
@@ -32,7 +32,7 @@ Build a fully offline, optional **Character Portrait Generator**. Given a charac
 - **S14/C11** handle print/export, using selected asset with missing-image fallback.
 - **S04** identifies game system/edition and supported descriptors; rules packs never execute model code.
 
-Pure TypeScript C13 contracts and prompt orchestration must not import Tauri, Svelte, filesystem, network, or model runtime. A host-side Windows inference adapter (possibly Rust process wrapper or isolated local worker) performs actual model execution and exposes a typed port. No cloud API or account dependency; model downloads, if supported, are explicitly user-initiated, verified, and never needed for normal app operation.
+Pure TypeScript C13 contracts and prompt orchestration must not import Tauri, Svelte, filesystem, network, or model runtime. The shared parent Windows inference service (possibly Rust process wrapper or isolated local worker) performs actual model execution and exposes a typed port. No cloud API or account dependency; model downloads, if supported, are explicitly user-initiated, verified, and never needed for normal app operation.
 
 ## 4. Proposed typed contracts (illustrative; refine during implementation)
 
@@ -91,3 +91,11 @@ Benchmark a fixed prompt suite: elf ranger, human fighter, dwarf cleric, halflin
 - Class and subclass dependencies must refresh immediately; handle classless systems, empty catalogs, pack removal, and stale selections safely.
 - Default **Headshot**; **Full Body** is a first-release option. Use separate prompts, framing and recommended aspect ratios; both remain editable.
 - Generated image variants, Save to Character, Save to Library and Export Image are independent actions. No generation writes to canonical character data until user selects Save to Character.
+
+## 10. Shared image generation and embedded navigation decision (2026-11-23)
+
+- **Single global Stable Diffusion 3 Medium installation/runtime:** shared parent Catalyst service consumed by Character Studio, NPC tools, GM tools, and map-art workflows. Never duplicate model weights or implement separate image pipelines per module. Parent assigns a unique shared engine ID and updates its engine registry; this document does not claim parent files have been changed.
+- **Map use is artwork only:** illustrated world/region maps, backgrounds, location concepts and textures are possible outputs. Coordinate-correct tactical grids, walls, scale, pathing, line-of-sight and editable vector/map layers remain owned by structured map engines, not SD3-generated pixels.
+- **Standalone Studio navigation:** a slim left rail for Characters, Create Character and Character Library as appropriate. Active-character workspaces use top tabs: Character, Builder, Sheet, Level Up, Inventory, Spells, Portrait, Notes, Journal, Export; hide/disable system-inapplicable tabs. Avoid a second global Dashboard/Campaigns/Library/Settings rail.
+- **Embedded in parent Catalyst:** parent owns the global left module navigation, dashboard, campaign, sourcebook library, settings and tools. Character Studio contributes a Characters entry and its contextual top workspace tabs, without duplicate global navigation. Host integration exposes typed routes, actions and state.
+- **Standalone and embedded views:** same reusable workspace components, with host navigation adapter and optional standalone shell; no rewriting pages for integration.
