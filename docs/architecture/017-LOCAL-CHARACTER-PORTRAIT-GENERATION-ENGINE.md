@@ -5,6 +5,8 @@
 **Owner:** Shared Stable Diffusion inference runtime belongs to parent Catalyst; Character Studio owns the portrait-specific prompt/UI adapter. Standalone Studio may prototype against a shared runtime port, but must not fork the model service.  
 **Consumers:** M01 Guided Builder, M02 Interactive Sheet, M04 NPC/Creature Composer; parent Catalyst may consume through a typed port.
 
+![Catalyst Character Generator](../../images/Catalyst Elf Ranger Portrait Studio.png)
+
 ## 1. Product requirement
 
 Build a fully offline, optional **Character Portrait Generator**. Given a character's tabletop RPG system/edition, species/race/ancestry, class/role, background and optional appearance choices, generate an original portrait that can be selected for the canonical character sheet. Default D&D 5e (2014) experience is a UX preference, not a restriction: any supported system or System-Neutral character can generate or import a portrait. Generation must not be required to create, save, edit, print or advance a character.
