@@ -2,16 +2,16 @@
 
 **Status:** Implementation-ready acceptance gate; not yet implemented or tested  
 **Owner:** Catalyst Character Studio (C01)  
-**Source of truth:** `docs/architecture/010-CHARACTER-ENGINE-BUILD-PLAN.md`; compatible with 002–005  
+**Source of truth:** `docs/architecture/016-CHARACTER-ENGINE-BUILD-PLAN.md`; compatible with 002–005  
 **Scope:** First demonstrably working offline domain artifact, before UI, rules packs, or advancement.
 
 ## Repository baseline and coordination
 
 The branch `docs/architecture-foundation` contains architecture documents and a README describing the application as pre-code. No application source, package manifests, automated tests, or Tauri build were verified in the inspected branch; treat the codebase as **not yet bootstrapped**, not as a working application. Verify the working tree locally before scaffolding. Do not claim passing tests until they have actually run.
 
-Architecture 002 previously proposed a local `dice-engine`; approved 010 supersedes that ownership: **S07 dice is owned by parent Catalyst**. Similarly, sourcebook/PDF (S12/S13), global file storage (S01–S03), and print (S14) remain host/shared services. C01 consumes an injected persistence port and may use a standalone local adapter for testing; it does not create a second global storage engine.
+Architecture 002 previously proposed a local `dice-engine`; approved 016 supersedes that ownership: **S07 dice is owned by parent Catalyst**. Similarly, sourcebook/PDF (S12/S13), global file storage (S01–S03), and print (S14) remain host/shared services. C01 consumes an injected persistence port and may use a standalone local adapter for testing; it does not create a second global storage engine.
 
-The approved 010 explicitly prioritizes System-Neutral plus appropriately licensed SRD 5.2.1 2024 content. Earlier documents also designate D&D 5e (2014) as the new-D&D-character default. These are distinct concerns: first C01 fixture is System-Neutral; initial bundled content and final D&D default behavior require an explicit implementation decision before UI release. C01 must not bake either edition into the schema.
+The approved 016 explicitly prioritizes System-Neutral plus appropriately licensed SRD 5.2.1 2024 content. Earlier documents also designate D&D 5e (2014) as the new-D&D-character default. These are distinct concerns: first C01 fixture is System-Neutral; initial bundled content and final D&D default behavior require an explicit implementation decision before UI release. C01 must not bake either edition into the schema.
 
 ## M1 deliverable
 
