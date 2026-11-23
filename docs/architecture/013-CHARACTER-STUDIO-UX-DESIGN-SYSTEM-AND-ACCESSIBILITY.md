@@ -6,7 +6,7 @@
 
 ## 1. Product experience
 
-Character Studio should feel like one coherent Catalyst application: charcoal/gunmetal surfaces, metallic silver structure and restrained amber/gold highlights. Prioritize readability, clear hierarchy, predictable keyboard operation and fast offline workflows over decorative effects. Do not copy D&D Beyond artwork, proprietary layouts or assets.
+Character Studio should feel like one coherent Catalyst application: Obsidian/charcoal/gunmetal surfaces, metallic silver structure and Frost Blue (#6EA9CF) interactive accents; use the approved nine-color palette in repository AGENTS.md. Prioritize readability, clear hierarchy, predictable keyboard operation and fast offline workflows over decorative effects. Do not copy D&D Beyond artwork, proprietary layouts or assets.
 
 The application offers Character Library, New Character (Guided/Manual), Drafts, Interactive Sheet, Advancement, Sheet Templates/Designer, Rules & Sources, Import/Export/Print and Settings. Capabilities not yet implemented must not appear as functional controls.
 
