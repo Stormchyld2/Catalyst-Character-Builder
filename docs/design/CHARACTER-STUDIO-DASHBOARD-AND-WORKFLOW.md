@@ -117,4 +117,22 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 **Branding and mockup limitations:** use actual `images/favicon.png` and `images/logo (1).png` in production, not generated substitutes. Frost Blue accents follow the approved palette. Character artwork and names in the mockup are placeholders. The screen is a character landing page, distinct from the full Interactive Character Sheet.
 
-**Next screen for approval:** Interactive Character Sheet.
+**Next screen for approval:** Interactive Character Sheet (approved; see §11).
+
+## 11. Approved Interactive Character Sheet (2026-11-23)
+
+**Status:** Product owner approved the visual layout. Save the mockup in repository root `images/interactive-character-sheet-mockup.png`; add an inline Markdown image reference here **only after** that image is committed. This is design approval, not proof of implementation.
+
+**Purpose and routing:** The Sheet workspace button and the Character Library card's explicit Open Sheet action open this playable, editable sheet directly. The Character button returns to the selected character's dashboard. Maintain selected character, breadcrumbs (`Characters > [Name] > Character Sheet`), unsaved-work protection and back navigation. The top contextual workspace navigation remains Character, Builder, Sheet (active), Level Up, Inventory, Spells, Portrait, Notes, Journal, Export, filtered by ruleset/permissions.
+
+**Approved screen composition:** Catalyst global sidebar with expandable Characters group; character identity header with portrait, name, ancestry/species, class/role/subclass, system/edition, status and campaign/roster when present. Sheet Actions panel: Edit Sheet, Print/PDF, Short Rest, Long Rest, Share and Options where applicable and supported. Under the header, sheet-local navigation: Sheet Overview, Abilities, Skills, Combat, Features, Equipment, Spells, Background, Notes, Resources; rules packs control the available tabs and labels. Use the approved Obsidian/Charcoal/Gunmetal and Frost Blue design system and original Catalyst logo assets.
+
+**Sheet Overview panels:** ability scores and modifiers; combat headline stats (AC, current/max HP, speed, initiative, proficiency bonus where relevant); saving throws and skills with proficiency state; attacks/weapons and damage/range/properties; features and traits; spells/powers; inventory with quantities/weight where tracked; consumable resources such as hit dice, spell slots and class resources. Provide expandable detail and direct navigation to dedicated views without duplicating divergent state.
+
+**Functional requirements:** This is an actual session-ready interactive sheet, **not** a static paper replica. Allow authorized editing and validated resource changes (damage/healing, current/max HP, temporary HP when supported, spell slot expenditure/recovery, hit dice, class/custom resources, equipment, currency and conditions). Dice-roll affordances use the host's shared dice service, with formula and rule-pack engines for modifiers. Track provenance and change history; never silently modify class/build choices or grant levels. Short/Long Rest actions must preview applicable ruleset-defined recovery and confirm before applying; hide them in systems without equivalent mechanics. Support keyboard, screen readers, responsive layout, and offline operation. Print/PDF and export use shared output services. Share is available only when a configured supported sharing mechanism exists, not as a dead button.
+
+**Ruleset adaptability:** D&D 5e 2014 mockup values, names and example character are illustrative only; 2024 edition remains a distinct rules pack. Classless, non-level-based and non-D&D systems supply their own sheet sections, terminology, progression, resource semantics and actions through installed rule-pack definitions. No hardcoded D&D-only fields or spell-slot model in the universal schema or UI.
+
+**State handling:** draft/incomplete characters, missing rules pack, broken portrait, archived/read-only, no spells, no inventory, invalid derived values and save failures must render intelligibly and non-destructively. Confirm destructive or irreversible actions. Save state must reflect actual local persistence.
+
+**Next design screen:** Create Character / Guided Builder entry and workflow.
