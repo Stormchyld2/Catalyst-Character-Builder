@@ -193,3 +193,19 @@ When option cards exceed the panel's available height, **scroll inside that pane
 **Integration and reliability:** Shared typed navigation and ruleset registry work unchanged in standalone Character Studio and embedded Catalyst. Keep offline operation, preserve selected choices when valid, announce dependent-option resets when invalid, and support empty-library/missing-edition/loading/error states without implying a system is installed when it is not. All named systems and numerical counts in the mockup are illustrative.
 
 **Next screen for design:** Determine the next unapproved character workspace screen (for example Level Up) before implementation.
+
+## 14. Approved Level Up / Character Advancement screen (2026-11-23)
+
+**Status:** Product owner approved the Level Up / Advancement visual layout. Mockup filename: `images/character-level-up-mockup.png`; add its relative Markdown image only once committed. Approval is of the visual concept and interaction model, not of the example Fighter mechanics or implementation.
+
+**Layout and navigation:** Preserve Catalyst's expandable Characters sidebar, contextual workspace tabs with Level Up active, breadcrumb `Characters > [Character] > Level Up`, and Frost Blue styling. Three stable desktop regions: left current-character portrait/identity, current and proposed progression and baseline stats; center ruleset-driven advancement stepper and option selection; right before/after numeric preview and concise changes-at-a-glance. Below, an optional system-specific feature information banner and persistent Back to Character, Cancel and Apply Advancement controls. Responsive layouts may stack intentionally.
+
+**Ruleset-driven advancement:** Load progression type, eligibility, steps, option definitions, prerequisite rules, granted features, calculations and validation from the character's installed system/edition/content packs. Level-based games show current/proposed levels; classless or skill-based games use their own progression terminology and mechanics. Only show relevant steps and actual choices, without blank cards or invented features. Automatic grants are not presented as optional picks. Missing packs, locked choices and unmet prerequisites must be explained clearly. Do not use the mockup's Fighter Level 4→5 feature or HP examples as authoritative rules data.
+
+**Panel behavior:** Stable outer panel sizes, consistent option buttons/cards, internal mouse-wheel/touchpad/touch/keyboard scrolling with visually hidden scrollbars. Dependent selections update live without moving the surrounding workspace; selecting an option must not silently invalidate other choices. Keyboard focus and scroll position remain predictable.
+
+**Preview and confirmation:** Compute an explicit before/after diff for changed attributes, resources, attacks, proficiencies, features and other system-specific values via shared rules/formula/choice engines. Display both automatic changes and selected options, plus any warnings or unresolved required choices. `Apply Level Up` is disabled until valid and complete, then requires explicit confirmation. Persist the advancement atomically to the existing character, log change history, and refresh the sheet/dashboard; prevent duplicate application on retries. Cancel leaves the character unchanged. Save draft/partial advancement safely when supported, without applying it prematurely.
+
+**Availability and edge cases:** Respect character ownership/permissions, archived/read-only state, maximum progression, unsupported advancement, invalid/missing rule packs and offline storage failures. No false success messages; never apply partial changes. Use original Catalyst branding assets and the approved shared standalone/embedded navigation contract.
+
+**Next screen to review:** Inventory or Spells workspace, depending on design priority.
