@@ -141,6 +141,8 @@ Open Sheet, Edit, Duplicate, Favorite/Unfavorite, Move to Collection, Export/Pri
 
 ## 12. Approved Guided Character Builder (2026-11-23)
 
+![Character Builder](../../images/character-builder.png)
+
 **Status:** Product owner approved the Guided Builder mockup and confirmed the D&D Beyond–familiar stepwise creation approach. Visual/design approval only; no implementation is implied. Store the approved image at `images/guided-character-builder-mockup.png` and insert a relative Markdown image reference here after the image is actually committed.
 
 **Screen structure:** Preserve the Catalyst global sidebar with expanded Characters group and contextual top workspace tabs, with Builder active. Breadcrumbs `Characters > Create Character > Guided Builder`; title, active tabletop system/edition selector and creation-mode control. The illustrated Guided / Standard / Advanced options are UX concepts: all must share the same character schema and validation, with mode-specific behavior specified before implementation; do not ship inert mode buttons.
