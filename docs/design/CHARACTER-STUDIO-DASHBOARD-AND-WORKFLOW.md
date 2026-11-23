@@ -175,6 +175,8 @@ When option cards exceed the panel's available height, **scroll inside that pane
 
 ## 13. Approved Create Character entry screen (2026-11-23)
 
+![Character Studio Builder](../../images/Character-studio-builder.png)
+
 **Status:** Product owner approved the Create Character entry screen and explicitly confirmed all selections are dynamic. This is a visual and functional design specification, not an implemented screen. Approved mockup filename: `images/create-character-entry-mockup.png`; insert its relative image link only after that file is committed.
 
 **Layout:** Keep Catalyst's approved sidebar and Frost Blue visual system. Breadcrumb `Characters > Create Character`, title, three adjacent bounded selection panels (1. Tabletop System, 2. Ruleset / Edition, 3. Creation Method), selected-ruleset information banner, Back to Characters and Create Character actions. On narrower viewports panels may stack responsively. During initial creation, character-specific top workspace actions must not imply an existing selected character; hide/disable nonapplicable tabs rather than showing misleading active-character controls.
