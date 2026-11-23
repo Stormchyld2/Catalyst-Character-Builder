@@ -10,7 +10,7 @@
 
 This standalone repository is the **implementation and test owner** of Character Builder, Character Sheet, advancement UX and all **C01–C12 supporting character engines** listed below. The same implementation is later integrated into the parent Catalyst program via adapters and contracts. Claude working in the parent Catalyst repo should **not independently rebuild** these engines.
 
-Use Catalyst branding: charcoal/gunmetal, metallic silver, amber/gold; Svelte 5 + TypeScript + Tauri 2 + Rust; Windows offline-first; ordinary user-owned Markdown/YAML/JSON project files authoritative, never a mandatory SQLite/cloud backend.
+Use Catalyst branding: Obsidian/charcoal/gunmetal, metallic silver and Frost Blue (#6EA9CF), with exact palette values defined in repository AGENTS.md; Svelte 5 + TypeScript + Tauri 2 + Rust; Windows offline-first; ordinary user-owned Markdown/YAML/JSON project files authoritative, never a mandatory SQLite/cloud backend.
 
 Feature benchmark: guided creation, calculations and interactive digital sheets as close to **D&D Beyond functionality** as practical without using its proprietary branding, interface artwork or non-licensed content. Both **Guided Builder** and **Manual Character Creation** are first-class, producing exactly the same canonical character record. Rule-pack support must remain system-independent; initial System-Neutral + appropriately licensed SRD 5.2.1 D&D 2024 edition.
 
