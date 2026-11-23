@@ -290,6 +290,8 @@ The character record links to its active portrait, selected token, image variant
 
 ## 18. Approved Character Notes and Worldbuilding Wiki Integration (2026-11-23)
 
+![Character Notes](../../images/Character-Notes.png)
+
 **Status:** Product owner approved the Character Notes screen and explicitly confirmed it is **player-owned note-taking, not direct editing of the Worldbuilding Wiki**. This is a design/architecture requirement, not proof of implementation. Approved visual mockup filename: `images/character-notes-mockup.png`; embed the relative Markdown image only after the asset is committed.
 
 ### 18.1 Notes screen and capabilities
