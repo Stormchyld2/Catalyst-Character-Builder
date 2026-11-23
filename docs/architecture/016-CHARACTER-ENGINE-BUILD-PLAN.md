@@ -23,6 +23,8 @@ Feature benchmark: guided creation, calculations and interactive digital sheets 
 | M03 — Character Advancement | Level-up/advance, dependencies, impact previews, approval and change history | V1 |
 | M04 — NPC & Creature Stat Block Composer | Quick NPC profile or full combat/stat block, templates and GM-ready presentation | Basic V1, expanded later |
 
+**Additional approved module:** **M22 Portrait Studio & VTT Token Maker**, owned by this standalone repository. See [018 Portrait Studio & VTT Token Maker](018-PORTRAIT-STUDIO-AND-VTT-TOKEN-MAKER.md). It is separate from optional C13 AI portrait generation and relies on parent S15 asset/image infrastructure. Prioritize the editor and non-AI token maker before C13 model integration.
+
 ## 3. Required character-specific supporting engines
 
 | ID | Engine | Core responsibilities |
