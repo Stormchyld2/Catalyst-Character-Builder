@@ -97,3 +97,7 @@ Never overwrite a user's library during install/update. Any incompatible migrati
 ## Personal-use content policy
 
 Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
+
+## Redistribution metadata validation
+
+Use synthetic mixed-rights fixtures to verify classification roundtrip, inherited restrictions, missing/unknown status and provenance preservation. If a distribution build is later authorized, require allowlist-only staging, dependency/reference validation, attribution checks and inspection of final artifacts including caches and embedded assets. Fail closed on unknown rights or restricted payloads; confirm personal packs are unchanged. No distribution build is required for current personal-use acceptance.
