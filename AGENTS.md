@@ -2,6 +2,8 @@
 
 > Instructions for Claude, Codex and other coding agents working in this repository. Read before planning, changing code, or creating pull requests. These instructions apply repository-wide. Detailed specifications are in `docs/architecture/001–016`; this file summarizes the approved decisions and execution rules. When a document conflicts with the newer approved Frost Blue palette below, this file and the approved parent Catalyst design tokens take precedence until that document is corrected.
 
+**Coding style is mandatory:** follow [`CODING-GUARDRAILS.md`](CODING-GUARDRAILS.md) for every code change. Keep code compact and direct: edit existing files before adding new ones, no abstraction until it is used three times, no unrequested features or speculative config, small diffs. The architecture boundaries below are required; do not add layers beyond them.
+
 ## 1. Product, repository and current phase
 
 - **Product:** Catalyst Character Studio — standalone offline-first Windows RPG character builder, interactive character sheet, advancement tool and NPC/creature composer.
