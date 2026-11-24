@@ -1,6 +1,7 @@
 import type {CharacterRecord,CharacterDraft,Json} from "./types.ts";
 export class CoreError extends Error {
- constructor(public readonly code:string, public readonly path:string) { super(code+" at "+path); }
+ readonly code:string; readonly path:string;
+ constructor(code:string, path:string) { super(code+" at "+path); this.code=code; this.path=path; }
 }
 export function fail(code:string,path:string):never {throw new CoreError(code,path);}
 export function object(v:unknown,p:string):Record<string,unknown>{
