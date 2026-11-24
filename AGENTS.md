@@ -43,7 +43,7 @@ These CSS names are proposed semantic aliases; adapt them to the parent Catalyst
 - **M04 NPC & Creature Stat Block Composer:** simple NPC and expanded rules-driven creature/stat-block workflows.\n- **C13 Local Portrait Generator:** optional offline portrait generation from system/species/class/appearance, model downloaded only by explicit user action, complete inference pipeline capped at 2B parameters pending verified benchmark; never block character creation.
 - **Sourcebooks:** users may reference lawfully obtained PDF and other digital books offline; sourcebook library/reader and citation infrastructure are shared parent services. Imported PDF text is **not automatically executable rules data**.
 - **Guided and Manual creation are equally first-class** and produce the same C01 character schema. System-Neutral manual creation must work with no D&D pack installed.
-- **Edition policy:** application default for new D&D characters is D&D 5e **2014**; D&D 5.5e **2024 Edition** is selectable. Initial planned distributable structured starter content is appropriately licensed **SRD 5.2.1 (2024)**, subject to license verification. Do not silently mix 2014/2024 rules, substitute a missing pack, or advertise unsupported guided content. Existing characters pin their own system/edition and pack versions/digests; changing default settings does not migrate them.
+- **Edition policy:** application default for new D&D characters is D&D 5e **2014**; D&D 5.5e **2024 Edition** is selectable. Initial test content may use **SRD 5.2.1 (2024)**; comprehensive lawful local content is the personal-use target. Do not silently mix 2014/2024 rules, substitute a missing pack, or advertise unsupported guided content. Existing characters pin their own system/edition and pack versions/digests; changing default settings does not migrate them.
 
 ## 4. Engine ownership — no duplicate implementations
 
@@ -88,7 +88,7 @@ Follow 015 and 016; no broad rewrite or parallel feature sprawl:
 5. **M4:** M01 guided creator with pack-declared steps, resumable drafts, idempotent finalization.
 6. **M5:** C04–C08/M03 gameplay and advancement, source-aware calculations, shared dice binding.
 7. **M6:** C10–C12/M04 source links, import/export, printing, designer and NPC/creature composer.
-8. **M7:** parent Catalyst integration through typed ports, Windows release validation and licensing audit.
+8. **M7:** parent Catalyst integration through typed ports, Windows personal-install validation and content provenance review.
 
 Every stage requires a demonstrably working offline artifact and tests before declaring the gate complete.
 
@@ -116,3 +116,7 @@ Every stage requires a demonstrably working offline artifact and tests before de
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
