@@ -34,7 +34,8 @@ function canonical(pack:RulesPack):string{return JSON.stringify(safeJson(pack));
 function freeze<T>(v:T):T{if(v&&typeof v==="object"){for(const x of Object.values(v))freeze(x);Object.freeze(v);}return v;}
 export class RulesRegistry {
  private readonly packs=new Map<string,InstalledPack>();
- constructor(private readonly hash:DigestProvider){}
+ private readonly hash:DigestProvider;
+ constructor(hash:DigestProvider){this.hash=hash;}
  install(input:unknown,expectedDigest:string,confirmed:boolean):InstalledPack{
  if(!confirmed)fail("CONFIRMATION_REQUIRED","install");
  const pack=parsePack(input),actual=digest(this.hash(canonical(pack)));
