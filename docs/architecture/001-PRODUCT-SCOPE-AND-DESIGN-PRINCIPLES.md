@@ -103,7 +103,7 @@ An engine is reusable only if it has no runtime dependency on the Character Stud
 A viable first release should allow a user to:
 1. Launch without signing in or connecting to the internet.
 2. Create a manual character and save/reopen it.
-3. Create a guided character using an installed, legally distributable 5e-compatible rules pack.
+3. Create a guided character using an installed, lawfully usable local 5e-compatible rules pack.
 4. View a usable interactive sheet with explainable calculated fields.
 5. Advance a character while retaining a history of changes.
 6. Print or export a readable character sheet.
@@ -124,7 +124,7 @@ Sourcebook integration and advanced homebrew tooling can be phased separately, c
 
 ## 10. Open decisions for follow-up architecture
 
-- Exact licensed content baseline for both D&D 5e (2014) and D&D 5.5e (2024 Edition), including rules-pack availability and permitted distribution.
+- Exact local content inventory for both D&D editions, including source provenance and coverage.
 - Rules-pack schema, dependency semantics, and cross-edition compatibility.
 - Character file layout, transactional writes, encryption options, and backup policy.
 - Sheet-template schema and manual/custom field model.
@@ -133,3 +133,7 @@ Sourcebook integration and advanced homebrew tooling can be phased separately, c
 - Exact PDF renderer/export pipeline and accessibility implementation.
 
 **Architecture sequencing:** 002 defines boundaries; 003 defines character data; 004 defines rules packs; 005 defines calculations and validation. Document 009 remains the sourcebook-library baseline and must be reconciled with those contracts.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
