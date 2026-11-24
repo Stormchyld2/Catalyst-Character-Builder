@@ -181,3 +181,7 @@ Concrete DTOs, versioning and typed error unions must be defined before implemen
 - Test real offline behavior and a Windows/Tauri build before claiming desktop readiness.
 
 **Architectural rule:** Character data is authoritative; sheets are reusable, customizable presentations of that data, not competing records.
+
+## Approved four-family V1 scope (2026-11-24)
+
+V1 includes profile-specific sheet templates per [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md). Use C09 bindings for percentile characteristics, sanity, luck, career, XP and corruption as appropriate; hide irrelevant fields. App shell uses AGENTS.md Frost Blue, superseding historical amber/gold UI references.
