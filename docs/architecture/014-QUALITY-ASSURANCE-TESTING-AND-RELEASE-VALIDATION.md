@@ -89,7 +89,11 @@ Never overwrite a user's library during install/update. Any incompatible migrati
 14. Permission-gated exports exclude hidden fields.
 15. Keyboard navigation and manual accessibility checks pass documented criteria.
 16. Parent consumer imports engine package without app runtime.
-17. Release artifact includes required notices and verified licensed content.
+17. Personal installation verifies local pack provenance and required notices; shared artifacts exclude proprietary local packs.
 18. Test evidence and known limitations are attached to milestone review.
 
 **Rule:** No milestone or release claim without executable evidence and documented failures.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
