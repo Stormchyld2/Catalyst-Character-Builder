@@ -128,3 +128,7 @@ Acceptance tests:
 10. No forced cloud, copied third-party visual assets, unlicensed image model redistribution or second generic inference/asset storage engine.
 
 **Next coordination step:** Register M22 in the parent Catalyst 023/024 ownership matrix; it is Character Studio-owned. M22 is a module, not a new global shared engine. Do not interfere with main Catalyst's active Campaign Wizard, soundboard, left panel or theme work.
+
+## Approved portrait environment selection (2026-11-24)
+
+Architecture 017 §12 controls the 52 text-prompt environment presets (36 fantasy, 10 modern, 6 universal), shared across D&D and Pathfinder editions and filtered by the character's pinned ruleset genre. Automatic (default), Preset, Custom Environment and Show All Environments are supported, with optional lighting, weather, time of day and atmosphere controls and prompt preview. Use the same C13 catalog and SD3 Medium runtime in the embedded builder and standalone Portrait Studio; generate scenery and character together, no required background image library. Imported backgrounds remain optional editor/token layers; no mandatory segmentation or inpainting in V1. Environment selection never changes mechanical character Background. Follow 017 acceptance gates and preserve non-AI workflows.
