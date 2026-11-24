@@ -36,7 +36,7 @@ Deliver a working character library and System-Neutral sheet with editable field
 
 ### M4 — M01 guided creation
 
-Implement pack-declared step graph, options, prerequisites, draft checkpoints, backtracking, live preview, incomplete choices, review/finalize and handoff to same C01/M02 sheet. Confirm licensed 2024 starter content before advertising supported guided options.
+Implement pack-declared step graph, options, prerequisites, draft checkpoints, backtracking, live preview, incomplete choices, review/finalize and handoff to same C01/M02 sheet. Verify installed local content and guided-option coverage before claiming support.
 
 **Exit:** complete guided creation and interrupted-draft recovery, including idempotent finalization and choice-change preview.
 
@@ -72,7 +72,7 @@ Package versioned pure engines and typed ports; build separate parent consumer f
 
 **Must ship in initial functional baseline:** C01 roundtrip, stable revisions, System-Neutral manual sheet, rules-neutral field binding, local recovery, clear error states.
 
-**Needed for full V1:** S04/S05/S06, C02/C03, M01 guided builder, C04–C08/M03 gameplay/advancement, licensed starter pack, basic print/export and basic NPC.
+**Needed for full V1:** S04/S05/S06, C02/C03, M01 guided builder, C04–C08/M03 gameplay/advancement, comprehensive lawful local rules packs, basic print/export and basic NPC.
 
 **Later polish:** sophisticated sheet designer, decorative print skins, broad third-party imports, advanced sourcebook extraction, additional RPG packs and optional integration enhancements.
 
@@ -105,3 +105,7 @@ A feature is done only when its public contract, deterministic tests, negative t
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
