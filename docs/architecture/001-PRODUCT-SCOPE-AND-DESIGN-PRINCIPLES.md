@@ -133,3 +133,7 @@ Sourcebook integration and advanced homebrew tooling can be phased separately, c
 - Exact PDF renderer/export pipeline and accessibility implementation.
 
 **Architecture sequencing:** 002 defines boundaries; 003 defines character data; 004 defines rules packs; 005 defines calculations and validation. Document 009 remains the sourcebook-library baseline and must be reconciled with those contracts.
+
+## Approved four-family V1 scope (2026-11-24)
+
+The full V1 release target is the four game families and five editions in [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md), plus System-Neutral. The initial D&D slice is not the full release scope.
