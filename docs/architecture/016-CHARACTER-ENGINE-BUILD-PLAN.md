@@ -81,7 +81,7 @@ Do not copy donor applications wholesale. Prioritize independently licensed code
 - `https://github.com/arrowedisgaming/OpenPentacle` (OpenPentacle): Svelte 5 UX reference **only** absent explicit GPL adoption.
 - `https://github.com/TaylorMouse/dnd_character_creator`: vanilla JS guided flow reference; its separately supplied proprietary book data and PDF template must **not** be copied.
 
-For copied functions/assets, pin source commit SHA, audit dependencies and asset/content licenses, retain notices and add attribution. Confirm exact licenses at the chosen source revision before importing. Use only lawful SRD content for bundled packs.
+For copied functions/assets, pin source commit SHA, audit dependencies and asset/content licenses, retain notices and add attribution. Confirm exact licenses at the chosen source revision before importing. Use appropriately licensed or synthetic content for shared fixtures and artifacts; local personal packs may include comprehensive lawfully usable non-SRD content.
 
 ## 7. Standalone-to-Catalyst integration contract
 
@@ -113,3 +113,7 @@ Those are illustrative names; finalize DTOs and typed errors in actual contracts
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
