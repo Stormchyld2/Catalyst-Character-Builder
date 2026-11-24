@@ -118,7 +118,7 @@ Users can author local structured packs for species, classes, subclasses, backgr
 
 Third-party packs are not automatically trusted because they were imported from a PDF or named after a publisher. Imported sourcebooks remain references until a reviewed conversion into structured rules is explicitly approved (009). OCR results are candidate text, not validated mechanics.
 
-Local use and export/distribution are separate rights decisions. Never bundle paid proprietary rulebooks, scrape protected services, bypass DRM, or assume that ownership of a PDF permits redistributing its text. Licensed material may be bundled only after verifying applicable redistribution terms and required attribution. **The initial 2014 and 2024 packaged content inventories remain a licensing and scope gate**; supporting an edition in the architecture does not mean all its proprietary options are included.
+Local use and export/distribution are separate rights decisions. Never bundle paid proprietary rulebooks, scrape protected services, bypass DRM, or assume that ownership of a PDF permits redistributing its text. Licensed material may be bundled only after verifying applicable redistribution terms and required attribution. **Local personal-use content availability and provenance remain scope gates; commercial redistribution approval is not required for lawful local use**; supporting an edition in the architecture does not mean all its proprietary options are included.
 
 ## 9. Public engine interfaces
 
@@ -173,8 +173,12 @@ Before writing the rules interpreter, finalize:
 - Edition/system ID grammar, stable option IDs, semantic versioning and content digest rules.
 - Exact dependency and overlay precedence model.
 - Bounded declarative expression language and error semantics (005).
-- Licensed, distributable starter-content inventory for each edition; no assumption of comprehensive official content.
+- Local content inventory for each edition; comprehensive coverage is the target, with missing content explicitly recorded.
 - Pack file layout, migration and atomic install process (010).
 - Builder step and sheet template schemas (006/008).
 
 **Architectural rule:** Editions and homebrew are data-driven and independently versioned. A character's saved choices are never silently reinterpreted under another rules edition.
+
+## Personal-use content policy
+
+Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is for the owner's private use only, with no planned commercial release or redistribution. Target comprehensive rules coverage, including lawful local sourcebooks and structured datasets, not SRD-only coverage. Commercial redistribution permission is not a gate for the owner's local installation; applicable access, copying, conversion and software-license terms still apply. Keep proprietary books, extracted data, assets and private packs outside tracked Git files, shared CI fixtures and public artifacts; use synthetic or appropriately licensed fixtures in Git. Do not bypass DRM or access controls. Record source provenance and validate imported data. Do not impose commercial licensing negotiations on lawful local use. Any future redistribution requires a separate owner decision and rights review.
