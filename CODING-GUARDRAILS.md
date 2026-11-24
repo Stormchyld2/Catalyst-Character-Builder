@@ -11,6 +11,14 @@ How to write code in this repo. `AGENTS.md` says *what* to build and *where* it 
 5. **Plain functions and plain data.** Prefer a function over a class, an object literal over a builder, a `switch` over a plugin map, a direct import over an index re-export chain. Use generics only when two or more real call sites need different types today.
 6. **No speculative config.** Hard-code values that have one caller. Add a setting, constant file or options parameter only when there is a second, actual use.
 
+## Working habits
+
+- **Read first.** Before editing, read the code you will touch, its callers and its tests, and check `git status`/`git diff`. Base changes on what the code does, not on what the docs say it should do.
+- **Reproduce, then fix.** Make a bug fail (a test or a command) before fixing it, and show it passing after. Fix the root cause, not the symptom.
+- **Ask instead of guessing wide.** If a request can be read more than one way, pick the narrowest reasonable reading and say so, or ask. Don't build every interpretation.
+- **Stop when blocked.** If something fails twice for an unclear reason, stop and report what you tried and what you saw. Don't pile on workarounds, retries or silenced errors.
+- **One task per branch and PR,** with small commits whose messages say what changed and why.
+
 ## Keep diffs small
 
 - Touch only the lines the task needs. Do not rename, reformat, reorder imports or "tidy up" unrelated code.
@@ -28,7 +36,7 @@ How to write code in this repo. `AGENTS.md` says *what* to build and *where* it 
 
 - Run the narrowest check that proves the change: the affected test file (`node --test packages/<pkg>/test/<file>.test.ts`) and `npm run typecheck`. Run the full suite before opening a PR.
 - Add a test only for new behavior or a fixed bug, in the existing test file for that package. One clear test beats five overlapping ones.
-- Summaries list what changed, which commands ran, and whether they passed. If you did not run something, say so. Never describe stubs, plans or unrun tests as working.
+- Never say "done" or "fixed" without running the check and quoting the result. Summaries list what changed, which commands ran and whether they passed, then what was **not** verified. Keep them short and plain. Never describe stubs, plans or unrun tests as working.
 
 ## Known pitfalls (mistakes already made in Catalyst)
 
