@@ -9,3 +9,10 @@ export function nextRevision<T extends RecordIdentity>(record: T, expected: numb
   if (record.revision !== expected) throw new Error("REVISION_CONFLICT");
   return { ...record, revision: record.revision + 1 };
 }
+
+export * from "./types.ts";
+export * from "./schema.ts";
+export * from "./character.ts";
+export * from "./draft.ts";
+export * from "./repository-port.ts";
+export * from "./migrations.ts";
