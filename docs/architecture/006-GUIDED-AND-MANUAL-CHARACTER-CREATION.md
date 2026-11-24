@@ -189,3 +189,7 @@ The parent Catalyst application imports the pure engine packages and injects its
 - Resolve the 2014 default setting versus initial 2024 SRD implementation-content availability explicitly in product UX.
 
 **Architectural rule:** The guided builder is a workflow over the canonical character record, not a competing character data model.
+
+## Approved four-family V1 scope (2026-11-24)
+
+V1 guided workflows cover all profiles in [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md), subject to lawful content gates. Include Pathfinder ancestry/heritage and feats, Cthulhu occupation/skill budgets and WFRP career/talent choices using the existing workflow graph. Never require irrelevant D&D steps.

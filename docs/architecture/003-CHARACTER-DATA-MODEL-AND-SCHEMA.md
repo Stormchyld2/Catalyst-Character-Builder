@@ -132,3 +132,7 @@ This sample is deliberately partial. It must **not** be copied directly into pro
 - **010:** character bundle layout, backup/migration strategy, atomic save and conflict policy.
 
 **Architecture principle:** The character model records what the player authored and selected; the rules engines explain what those choices mean. Never conflate them.
+
+## Approved four-family V1 scope (2026-11-24)
+
+Apply [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md): test namespaced characteristic, occupation, career/tier, skill improvement, XP and resource data without mandatory class or level fields. Preserve pinned profiles and unknown values across roundtrips.

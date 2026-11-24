@@ -178,3 +178,7 @@ Before writing the rules interpreter, finalize:
 - Builder step and sheet template schemas (006/008).
 
 **Architectural rule:** Editions and homebrew are data-driven and independently versioned. A character's saved choices are never silently reinterpreted under another rules edition.
+
+## Approved four-family V1 scope (2026-11-24)
+
+Add Pathfinder 2e Remastered, Call of Cthulhu 7e and WFRP 4e to V1 profile targets per [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md). Keep distinct stable system/edition identities, data-only workflows, sheet templates, artwork mappings and source/license inventories. Final IDs must follow existing registry conventions.

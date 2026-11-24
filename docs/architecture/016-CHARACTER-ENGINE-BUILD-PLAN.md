@@ -113,3 +113,7 @@ Those are illustrative names; finalize DTOs and typed errors in actual contracts
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Approved four-family V1 scope (2026-11-24)
+
+Apply the profile requirements and acceptance gates in [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md) to existing C01–C13 and S04–S06 contracts. C08 consumes S07 for d20 and percentile outcomes. Do not create per-system engines. Extend contracts only for demonstrated gaps in actual fixtures. Initial 2024 SRD content is the first slice, not the full V1 target.
