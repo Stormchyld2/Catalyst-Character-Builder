@@ -105,3 +105,28 @@ Benchmark a fixed prompt suite: elf ranger, human fighter, dwarf cleric, halflin
 ## 11. Zero-reorganization integration requirement (2026-11-23)
 
 Character Studio navigation is **module-owned, host-rendered**. Define one typed navigation manifest containing stable route IDs, parent/child relationships, labels, icons, ordering, visibility and feature requirements. The standalone shell and parent Catalyst shell both consume the same manifest; the parent determines the Characters group's global position. Do not hardcode sidebar markup or duplicate route definitions in feature pages. Character-specific top workspace tabs are a separate contextual manifest reused unchanged in standalone and embedded modes. Feature pages must be shell-agnostic and use injected navigation, settings, assets, storage, rules and image-generation ports; avoid absolute standalone-only paths. Integration should require adapter/registration wiring, not moving components or reorganizing directories. Verify this with a standalone-versus-embedded navigation contract test, route deep links, back navigation, and permission/feature gating. The exact final child list remains open.
+
+## 12. Approved ruleset-aware portrait environments (2026-11-24)
+
+SD3 Medium generates character and environment together in one text-to-image request by default, for coherent composition, lighting and shadows. No mandatory bundled background images or separate inference pipeline. Environment selection is descriptive, not the mechanical character Background choice.
+
+Modes: Automatic (default, character/ruleset context), Preset, Custom Environment (free text). Studio backdrops are presets. Independent optional lighting, time of day, weather and atmosphere controls default to Automatic except Cinematic lighting. Omit irrelevant automatic values from the prompt. Preview the composed environment prompt before generation.
+
+### Initial catalog (52 presets)
+
+| Category | Presets |
+|---|---|
+| Fantasy Wilderness | Ancient Woodland; Mountain Wilderness; Enchanted Grove; Haunted Swamp; Frozen Tundra; Rolling Grasslands |
+| Fantasy Settlements | Medieval Tavern; City Alley; Coastal Harbor; Village Marketplace; Royal Court; City Rooftops |
+| Religious & Arcane | Temple Sanctuary; Arcane Library; Sacred Grove; Wizard's Tower; Forgotten Shrine; Arcane Laboratory |
+| Military & Trade | Fortress Courtyard; Artisan Workshop; Battlefield; Military Encampment; Training Grounds; Blacksmith's Forge |
+| Underground & Ruins | Underground Cavern; Desert Ruins; Forgotten Dungeon; Ancient Catacombs; Abandoned Mine; Lost Civilization |
+| Supernatural | Shadow Realm; Celestial Sanctuary; Fey Glade; Infernal Wasteland; Astral Expanse; Cursed Forest |
+| Modern | Downtown Metropolis; Abandoned Warehouse; Urban Rooftop; Industrial District; Underground Subway; Modern Office; Neon-Lit Street; Research Laboratory; Rural Homestead; Desert Highway |
+| Studio & Universal | Dark Studio; Neutral Studio; Parchment Backdrop; Soft Gradient; Solid Color; Dramatic Spotlight |
+
+Each data-only preset has a stable ID, display name, category, descriptive prompt and genre/compatibility tags. Use a single catalog shared across editions and products; do not duplicate fantasy presets for Pathfinder. D&D 2014/2024 and Pathfinder 1e/2e default to Fantasy + Universal; modern systems default to Modern + Universal; System-Neutral shows all. Custom rulesets use declared genre metadata from validated installed pack context via S04/C02; missing/unknown genre falls back to all presets without guessing. Show All Environments overrides filtering, not rules legality. These mappings do not imply that any particular rules pack is installed or implemented. In builder context use the draft's pinned ruleset automatically; standalone uses the selected character context. Preserve explicit choices on context changes, flag out-of-filter presets and allow Show All or reselection; never silently substitute a different environment.
+
+C13 owns prompt composition; reuse existing model runtime and asset ports. Persist selected preset ID and resolved prompt with generation provenance where supported; do not mutate character mechanics. Imported background layers remain optional editor/token features under 018; replacing the background of a flattened portrait requires segmentation or inpainting and is not a V1 requirement.
+
+Acceptance: verify all 52 unique preset IDs, genre filters, shared fantasy catalog, unknown/custom and System-Neutral fallback, Show All, automatic/custom modes, deterministic prompt composition, stale selections, offline operation, and identical behavior in builder and standalone contexts. Benchmark actual SD3 Medium prompt adherence separately; do not claim guaranteed output fidelity.
