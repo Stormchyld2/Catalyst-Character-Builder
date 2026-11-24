@@ -30,6 +30,18 @@ How to write code in this repo. `AGENTS.md` says *what* to build and *where* it 
 - Add a test only for new behavior or a fixed bug, in the existing test file for that package. One clear test beats five overlapping ones.
 - Summaries list what changed, which commands ran, and whether they passed. If you did not run something, say so. Never describe stubs, plans or unrun tests as working.
 
+## Known pitfalls (mistakes already made in Catalyst)
+
+- **Node runs `.ts` files with type stripping, so use only erasable TypeScript.** No constructor parameter properties (`constructor(private readonly x: T)`): declare the field and assign it in the body. No `enum`, `namespace`, `import x = require()` or decorators. Use `as const` objects or string-literal unions instead of enums. Keep `.ts` extensions on relative imports, and use `import type` for type-only imports.
+- **The build must pass after every commit.** Run typecheck and tests before you push. Never commit a half-edited file or a reference to a module, function or asset that isn't on the branch yet.
+- **Rename every caller.** When you rename or remove a function, store method or export, search the repo and update every call site in the same change. Catalyst shipped a broken "Next" button because the UI called a store method that had been renamed.
+- **Don't delete or weaken failing tests.** When a feature changes, rewrite its tests to cover the new behavior. A failing test is a bug report, not clutter.
+- **Test on Windows if it runs on Windows.** Code behind a Windows-only flag (`#[cfg(windows)]`, path handling, file locking) only counts as tested if CI runs the tests on `windows-latest`. Building it is not testing it.
+- **Keep file and path names short.** Windows paths cap at 260 characters and file names at 255 bytes. Never derive temp or recovery names from the user's filename (hex-encoding doubles its length); use a short ID. Don't nest staging folders.
+- **One source of truth.** Each setting or piece of data lives in exactly one file or store. Never write the same value to two places that can drift apart.
+- **Finish removals.** When a feature is retired, remove its menu items, shortcuts, settings, file associations and UI text in the same change, or list what is left in the summary.
+- **Make new behavior handle old data.** Old projects, records and file formats must still open: migrate them, keep reading the old format, or show a clear read-only notice. Never strand existing user data.
+
 ## Quick self-check before submitting
 
 - Could this be done with fewer files? Fewer functions? Fewer lines?
