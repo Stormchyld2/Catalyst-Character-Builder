@@ -175,3 +175,7 @@ Before coding M03/C04:
 - Confirm licensed content and source citations for any bundled advancement tables.
 
 **Architectural rule:** Advancement is a reviewable transaction over a pinned character and rules context; it never silently rewrites a character, rolls dice, or substitutes another edition.
+
+## Approved four-family V1 scope (2026-11-24)
+
+C04/M03 must support Pathfinder level/feat progression, Cthulhu skill improvement and WFRP XP purchases/career transitions per [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md), with the existing preview/commit/history contract and no mandatory level increments.
