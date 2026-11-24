@@ -105,3 +105,7 @@ A feature is done only when its public contract, deterministic tests, negative t
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Approved four-family V1 scope (2026-11-24)
+
+The full V1 target includes all profiles in [019](019-MULTI-SYSTEM-V1-RULESET-PROFILES.md). Sequence D&D, Pathfinder, Cthulhu, WFRP after System-Neutral foundation, with headless profile fixtures before production UI. These packs are no longer later-polish scope. Release requires each profile's licensing and acceptance gates or explicit owner-approved scope revision.
