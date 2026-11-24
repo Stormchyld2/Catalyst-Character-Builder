@@ -116,3 +116,7 @@ Every stage requires a demonstrably working offline artifact and tests before de
 ## Approved engine-first execution override (2026-11-23)
 
 Owner-approved controlling sequence: M0 toolchain and ownership audit; shared engines (reuse verified parent implementations, otherwise implement portable libraries with explicit ownership); all character-specific engines C01–C13 and M01–M04/M22 domain services, including drafts, inventory, spells, notes, journal, roster, conversion and export; engine validation gate; only then production UI for all 17 approved workspaces; parent integration and release. Earlier milestones requiring production UI before engine completion are superseded; retain their functional acceptance tests using headless harnesses until UI phase. Optional AI model availability must not block non-AI portrait/token functionality. No duplicate shared engines, no fabricated test results. Preserve official branding per design section 27. Owner authorizes routine implementation and documentation updates without per-milestone approval. Record actual evidence and blockers; do not mark untested work complete.
+
+## Approved four-family V1 scope (2026-11-24)
+
+V1 targets D&D 2014/2024, Pathfinder 2e Remastered, Call of Cthulhu 7e and WFRP 4e, plus System-Neutral. Follow Architecture 019 for profile requirements, licensing and release gates. Earlier initial-content statements describe the first implementation slice, not the full V1 scope. Preserve engine-first order and existing ownership.
