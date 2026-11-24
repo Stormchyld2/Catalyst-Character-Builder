@@ -124,3 +124,7 @@ Owner-approved personal-use policy (2026-11-24): Catalyst Character Studio is fo
 ## Content redistribution tags
 
 Follow Architecture 004's redistribution classification for all acquired rules and assets. Preserve source provenance, default unknown rights to excluded from any future distribution, and keep private content outside Git. Personal use remains the target; do not build a speculative distribution pipeline now. Any later distribution requires explicit owner approval and verified rights, dependency closure and artifact checks.
+
+## Local content storage safeguard
+
+Owner-approved public-repository safeguard: copyrighted sourcebook PDFs, restricted extracted rules data and restricted artwork must remain outside both Git working trees, in an owner-selected local content root (recommended Windows Desktop/Catalyst Content, organized by system/edition). Resolve the actual folder through user selection, never hardcode a username or Desktop path. Store local paths in untracked local settings; do not upload private content to GitHub, CI, logs or shared artifacts. A future private repository does not automatically authorize upload; require explicit owner approval and applicable rights. Keep local content separate from distributable code.
